@@ -1,3 +1,4 @@
+import { color, width } from '@mui/system';
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -22,14 +23,21 @@ const responsive = {
   }
 };
 
+const CaroStyle = {
+  padding: '3.rem',
+  background: 'grey',
+  width: '23.62rem',
+  height: '15rem'
+}
+
 function CarouselBar() {
   return (
     <div>
         <Carousel responsive={responsive}>
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
+            <div style={CaroStyle}>Item 1</div>
+            <div style={CaroStyle}>Item 2</div>
+            <div style={CaroStyle}>Item 3</div>
+            <div style={CaroStyle}>Item 4</div>      
         </Carousel>
     </div>
   )
