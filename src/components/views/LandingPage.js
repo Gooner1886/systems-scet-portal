@@ -12,7 +12,9 @@ const LandingPage = () => {
       <NavBar />
       <CarouselBar />
       <div>LandingPage</div>
-      <Footer />
+      <div className="BotFoot">
+        <Footer />
+      </div>
     </>
   );
 };
