@@ -30,7 +30,7 @@ function CarouselBar() {
             <div>Item 2</div>
             <div>Item 3</div>
             <div>Item 4</div>
-        </Carousel>;
+        </Carousel>
     </div>
   )
 }
