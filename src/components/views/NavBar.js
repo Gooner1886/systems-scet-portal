@@ -89,7 +89,6 @@ const NavBar = () => {
                 <Button
                   sx={{
                     my: 2,
-                    color: "black",
                     display: "block",
                     padding: "0.4375rem 1.5625rem",
                     borderRadius: "9px",
