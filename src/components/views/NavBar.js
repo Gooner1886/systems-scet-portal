@@ -40,7 +40,7 @@ const NavBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              Backgroundcolor="black"
             >
               <MenuIcon />
             </IconButton>
@@ -72,7 +72,7 @@ const NavBar = () => {
 
           <div>
             <div>
-              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1,color:'blue' }} />
             </div>
 
             <div>

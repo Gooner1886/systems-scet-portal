@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 const LandingPage = () => {
@@ -6,6 +7,7 @@ const LandingPage = () => {
     <>
       <NavBar />
       <div>LandingPage</div>
+      <Footer />
     </>
   );
 };
