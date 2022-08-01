@@ -10,6 +10,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import logo from "../../Assets/logo.png"
+import { Link, NavLink } from "react-router-dom";
+import { color } from "@mui/system";
 import Logged from '../../context'
 
 const pages = ["Research & Innovations", "Student Corner"];
@@ -35,7 +38,16 @@ const NavBar = () => {
           disableGutters
           style={{ display: "flex", justifyContent: "space-between" }}
         >
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1,color:'blue' }} />
+            <Box className='nav__container-image' style={{
+              display : 'flex',
+              flex: 1,
+              padding: '0.5rem'
+            }}>
+                   <img src={logo} alt="logo" className="nav__logo" style={{
+                      width: '100px',
+                      height: '80px'
+                   }} />
+            </Box>
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -76,16 +88,12 @@ const NavBar = () => {
 
           <div>
             <div>
-              <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1,color:'blue' }} />
-            </div>
-
-            <div>
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <Box sx={{ display: { xs: "none", md: "flex" , paddingLeft: '1rem' } }}>
                 {pages.map((page) => (
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "black", display: "block" }}
+                    sx={{ my: 2, color: "black", display: "flex", flexGrow: '1',}}
                   >
                     {page}
                   </Button>
@@ -106,7 +114,7 @@ const NavBar = () => {
                     padding: "0.4375rem 1.5625rem",
                     borderRadius: "9px",
                     color: "white",
-                    backgroundColor: "#931f1d",
+                    backgroundColor: "#931f1d", 
                   }}
                 >
                   {loggedin.value?"Logout":"Login"}
