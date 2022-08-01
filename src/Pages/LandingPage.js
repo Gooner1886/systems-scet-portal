@@ -1,15 +1,13 @@
 import React from "react";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
-import CarouselBar from "./CarouselBar";
-import Carousel from "react-multi-carousel";
+import Footer from "../components/views/Footer";
+import Navbar from "../components/views/Navbar/Navbar";
+import CarouselBar from "../components/views/CarouselBar";
 import "react-multi-carousel/lib/styles.css";
-
 
 const LandingPage = () => {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <CarouselBar />
       <div>LandingPage</div>
       <div className="BotFoot">
