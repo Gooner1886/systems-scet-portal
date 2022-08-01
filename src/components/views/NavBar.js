@@ -13,11 +13,15 @@ import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../Assets/logo.png"
 import { Link, NavLink } from "react-router-dom";
 import { color } from "@mui/system";
+import Logged from '../../context'
 
 const pages = ["Research & Innovations", "Student Corner"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const navigate=useNavigate();
+  const loggedin=useContext(Logged);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -95,6 +99,15 @@ const NavBar = () => {
                   </Button>
                 ))}
                 <Button
+
+                  onClick={()=>{
+                    if(loggedin.value)
+                    {
+                      localStorage.clear();
+                    }
+                    navigate("/login");
+                  }}
+
                   sx={{
                     my: 2,
                     display: "block",
@@ -104,12 +117,7 @@ const NavBar = () => {
                     backgroundColor: "#931f1d", 
                   }}
                 >
-                 {/* <Link>Login</Link>  */}
-                 <NavLink to="/login" style={{
-                  textDecoration: 'none',
-                  color: 'white'
-                 }}>Login</NavLink>
-                 
+                  {loggedin.value?"Logout":"Login"}
                 </Button>
               </Box>
             </div>

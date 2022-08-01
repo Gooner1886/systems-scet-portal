@@ -1,17 +1,22 @@
 import { List, ListItemText,AppBar,ListItem,Button ,Divider} from '@mui/material'
 import { Box, Container,} from '@mui/system'
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.scss'
 import logo from '../../../Assets/logo.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import {ListItemButton} from '@mui/material'
 import Drawer from '@mui/material/Drawer';
+import { useNavigate } from 'react-router-dom'
+import Logged from '../../context'
 
 export default function Navbar() {
 
     const [state, setState] = React.useState({
         menu : false
       });
+
+      const navigate=useNavigate();
+      const loggedin=useContext(Logged);
 
       const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -68,9 +73,19 @@ export default function Navbar() {
 
                     
                 <Box className='nav__container-button' >
-                    <Button variant="contained" className='log'>Login</Button>
+                    <Button variant="contained" className='log' 
+                      onClick={()=>{
+                        if(loggedin.value)
+                        {
+                          localStorage.clear();
+                        }
+                        navigate("/login");
+                      }}
+                      
+                    
+                    >{loggedin.value?"Logout":"Login"}</Button>
                     {[  'right'].map((anchor) => (
-        <React.Fragment key={anchor}>
+                <React.Fragment key={anchor}>
           <Button className='nav__main-list-menu'  onClick={toggleDrawer(anchor, true)} style={{
             backgroundColor: '#fff',
           }}>
