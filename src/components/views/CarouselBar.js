@@ -32,7 +32,9 @@ const CaroStyle = {
 
 function CarouselBar() {
   return (
-    <div>
+    <div style={{
+      padding: '35px'
+    }}>
         <Carousel responsive={responsive}>
             <div style={CaroStyle}>Item 1</div>
             <div style={CaroStyle}>Item 2</div>
