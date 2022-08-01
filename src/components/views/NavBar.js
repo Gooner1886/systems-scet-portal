@@ -10,11 +10,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import Logged from '../../context'
 
 const pages = ["Research & Innovations", "Student Corner"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const navigate=useNavigate();
+  const loggedin=useContext(Logged);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -87,6 +91,15 @@ const NavBar = () => {
                   </Button>
                 ))}
                 <Button
+
+                  onClick={()=>{
+                    if(loggedin.value)
+                    {
+                      localStorage.clear();
+                    }
+                    navigate("/login");
+                  }}
+
                   sx={{
                     my: 2,
                     display: "block",
@@ -96,7 +109,7 @@ const NavBar = () => {
                     backgroundColor: "#931f1d",
                   }}
                 >
-                  Login
+                  {loggedin.value?"Logout":"Login"}
                 </Button>
               </Box>
             </div>
