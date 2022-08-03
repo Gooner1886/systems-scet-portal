@@ -1,4 +1,39 @@
+.caro{
+    margin-top: 500px;
+}
+
 .logo{
     height: "16rem";
     width: "20rem"
+}
+p{
+    text-align: center;
+}
+h1 .head{
+    text-align: center;
+}
+.img{
+    padding: 100px
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding-right: 400px;
+    margin-bottom: 50px;
+}
+.awards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+.one{
+    text-align: center;
+    padding-left: 7rem;
+}
+.three{
+    padding-left: 16rem;
 }

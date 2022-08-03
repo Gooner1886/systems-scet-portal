@@ -24,9 +24,10 @@ const responsive = {
 };
 
 const CaroStyle = {
+  marginTop:'100px',
   padding: '3.rem',
-  background: 'grey',
-  width: '23.62rem',
+  background: '#e4e4e4',
+  width: '30rem',
   height: '15rem'
 }
 
