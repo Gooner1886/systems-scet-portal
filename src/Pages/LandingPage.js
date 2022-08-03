@@ -19,36 +19,7 @@ const LandingPage = () => {
     <>
       <Navbar />
       <CarouselBar />
-      {/* <div>LandingPage</div> */}
-      {/* <Grid container columns={30} spacing={3}>
-        <Grid item xs={2} sm={1}></Grid>
-        <Grid item xs={4} sm={12}>
-          <img
-            src={logo}
-            alt="logo"
-            style={{ height: "16rem", width: "20rem" }}
-          />
-        </Grid>
-        <Grid item xs={6} sm={4}>
-          <h1>School of Computer Engineering and Technology</h1>
-          <div className="para">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              odio arcu, sollicitudin at risus semper, consequat ultrices felis.
-              Morbi tellus turpis, euismod quis maximus vehicula, lacinia ac
-              nisl. Maecenas dignissim eros lorem, nec bibendum erat faucibus
-              et. Praesent vitae facilisis sem. Aenean elit felis, varius nec
-              auctor at, tristique ultrices neque. Morbi felis dui, venenatis
-              sit amet quam a, molestie ultrices nisi. Vivamus dignissim
-              imperdiet tempus. Suspendisse potenti. Morbi efficitur nulla
-              ipsum, ac mattis leo sagittis id. Aliquam erat volutpat. Quisque
-              vitae tempor quam. Proin a ligula vel purus pharetra commodo quis
-              eget leo. Nullam placerat vitae erat quis viverra.
-            </p>
-          </div>
-        </Grid>
-      </Grid> */}
-      {/* <Chart /> */}
+
       <div className="content">
         <div>
           <img
@@ -77,7 +48,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <h1 style={{padding:'3rem'}}>Meet the Dean HoS</h1>
+      <h1 style={{padding:'5rem'}}>Meet the Dean HoS</h1>
       <div className="content">
         <div>
           <img
@@ -106,7 +77,7 @@ const LandingPage = () => {
           <h1 className="head">Dr. Vrushali Kulkarni Head of School and Professor</h1>
         </div>
       </div>
-      <h1 style={{padding:'3rem'}}>Awards & Achievements</h1>
+      <h1 style={{padding:'5rem'}}>Awards & Achievements</h1>
       <div className="awards">
         <div className="one">
           <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." /> </div>
@@ -118,19 +89,19 @@ const LandingPage = () => {
           <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis."/> </div>
         </div>
       </div>
-      <h1 style={{padding:'3rem'}}>Research & Publication</h1>
-      <div className="lgraph">
-        <div><ImageCard /></div>
-        <div><ImageCard /></div>
-        <div><ImageCard /></div>
+      <h1 style={{padding:'5rem'}}>Research & Publication</h1>
+      <div className="lcard">
+        <div style={{padding:'5rem'}}><ImageCard /></div>
+        <div style={{padding:'5rem'}}><ImageCard /></div>
+        <div style={{padding:'5rem'}}><ImageCard /></div>
       </div>
 
       <BarChart />
       
       <div className="lgraph">
-        <div><LineChart /></div>
-        <div><LineChart /></div>
-        <div><LineChart /></div>
+        <div style={{marginRight:'2rem',padding:'3rem',backgroundColor:'#87ceeb'}}><LineChart /></div>
+        <div style={{marginRight:'2rem',padding:'3rem',backgroundColor:'#87ceeb'}}><LineChart /></div>
+        <div style={{padding:'3rem',backgroundColor:'#87ceeb'}}><LineChart /></div>
       </div>
       {/* <div className="BotFoot"> */}
       <div>

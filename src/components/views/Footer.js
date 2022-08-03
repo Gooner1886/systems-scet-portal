@@ -17,10 +17,10 @@ const Footer = () => {
         bgcolor="#273872"
         color="white"
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" style={{paddingLeft:'20rem'}}>
           <Grid container spacing={5} columns={25}>
             <Grid item xs={5} sm={4}>
-              <Box>SCET</Box>
+              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>SCET</Box>
               <Box>
                 <Link
                   href="/"
@@ -68,7 +68,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box>Support</Box>
+              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Support</Box>
               <Box>
                 <Link
                   href="/"
@@ -116,7 +116,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box>Legal</Box>
+              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Legal</Box>
               <Box>
                 <Link
                   href="/"
@@ -164,7 +164,7 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box>Social</Box>
+              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Social</Box>
               <Box>
                 <Link
                   href="/"

@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 function BarChart() {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5" style={{padding:'5rem'}}>
+      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem',backgroundColor:'#87ceeb'}} >
         <h3 className="text-center mt-3 mb-3">Total Citations</h3>
 
         <Chart
@@ -28,7 +28,7 @@ function BarChart() {
               style: { fontSize: 18 },
             },
 
-            colors: ["violet"],
+            colors: ["blue"],
             theme: { mode: "light" },
 
             xaxis: {
@@ -71,7 +71,7 @@ function BarChart() {
                 return `${val}`;
               },
               style: {
-                colors: ["blue"],
+                colors: ["black"],
                 fontSize: 15,
               },
             },

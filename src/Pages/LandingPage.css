@@ -32,12 +32,17 @@ h1 .head{
 }
 .one{
     text-align: center;
-    padding-left: 7rem;
+    /* padding-left: 5rem; */
 }
 .three{
-    padding-left: 16rem;
+    padding-left: 5rem;
 }
 .lgraph{
+    display :grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2%;
+}
+.lcard{
     display :grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
