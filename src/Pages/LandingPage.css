@@ -37,3 +37,7 @@ h1 .head{
 .three{
     padding-left: 16rem;
 }
+.length{
+    display :grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

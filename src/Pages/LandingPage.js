@@ -10,6 +10,9 @@ import lady from "../Assets/lady.jpg";
 import ImageCard from "../components/views/ImageCard/ImageCard";
 
 import "./LandingPage.css";
+import BarChart from "../components/views/Chart/BarChart";
+import LineChart from "../components/views/Chart/LineChart";
+import { Container } from "@mui/material";
 
 const LandingPage = () => {
   return (
@@ -115,7 +118,25 @@ const LandingPage = () => {
           <div style={{padding:'5rem'}}><ImageCard /> </div>
         </div>
       </div>
-
+      <BarChart />
+      {/* <Container maxWidth="xl">
+        <Grid container spacing={5} columns={12}>
+          <Grid item xs={6} sm={1}>
+            <LineChart />
+          </Grid>
+          <Grid item xs={6} sm={1}>
+            <LineChart />
+          </Grid>
+          <Grid item xs={6} sm={1}>
+            <LineChart />
+          </Grid>
+        </Grid>
+      </Container> */}
+      <div className="lgraph">
+        <div><LineChart /></div>
+        <div><LineChart /></div>
+        <div><LineChart /></div>
+      </div>
       {/* <div className="BotFoot"> */}
       <div>
         <Footer />
