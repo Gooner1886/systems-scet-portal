@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 import logo from '../../../Assets/logo.png'
 
-export default function ImageCard() {
+export default function ImageCard(props) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -20,8 +20,7 @@ export default function ImageCard() {
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            odio arcu, sollicitudin at risus semper, consequat ultrices felis.
+            {props.content}
           </Typography>
         </CardContent>
       </CardActionArea>

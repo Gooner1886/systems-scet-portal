@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 function BarChart() {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5">
+      <div className="container-fluid mb-5" style={{padding:'5rem'}}>
         <h3 className="text-center mt-3 mb-3">Total Citations</h3>
 
         <Chart

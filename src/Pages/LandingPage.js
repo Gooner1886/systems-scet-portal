@@ -109,29 +109,24 @@ const LandingPage = () => {
       <h1 style={{padding:'3rem'}}>Awards & Achievements</h1>
       <div className="awards">
         <div className="one">
-          <div style={{padding:'5rem'}}><ImageCard /> </div>
-          <div style={{padding:'5rem'}}><ImageCard /> </div>
+          <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." /> </div>
+          <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis."/> </div>
         </div>
 
         <div className="three">
-          <div style={{padding:'5rem'}}><ImageCard /> </div>
-          <div style={{padding:'5rem'}}><ImageCard /> </div>
+          <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis."/> </div>
+          <div style={{padding:'5rem'}}><ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis."/> </div>
         </div>
       </div>
+      <h1 style={{padding:'3rem'}}>Research & Publication</h1>
+      <div className="lgraph">
+        <div><ImageCard /></div>
+        <div><ImageCard /></div>
+        <div><ImageCard /></div>
+      </div>
+
       <BarChart />
-      {/* <Container maxWidth="xl">
-        <Grid container spacing={5} columns={12}>
-          <Grid item xs={6} sm={1}>
-            <LineChart />
-          </Grid>
-          <Grid item xs={6} sm={1}>
-            <LineChart />
-          </Grid>
-          <Grid item xs={6} sm={1}>
-            <LineChart />
-          </Grid>
-        </Grid>
-      </Container> */}
+      
       <div className="lgraph">
         <div><LineChart /></div>
         <div><LineChart /></div>
