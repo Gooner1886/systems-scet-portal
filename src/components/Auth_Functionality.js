@@ -6,6 +6,19 @@ const API_KEY="AIzaSyAhgUECEcnMz7li38-C_nkJcltw536Kcx4";
 //HIDE LATER IN ENV
 
 
+async function VerifyCaptcha(token){
+    let status=false;
+    
+    await axios.post("http://localhost:3001/post",{token}).then(()=>{
+        status=true; 
+    }).catch(()=>{
+        status=false;
+    })
+
+    return status;
+}
+
+
 function CheckSignIn(callback)
 {
     let token=localStorage.getItem('token');
@@ -22,7 +35,7 @@ function CheckSignIn(callback)
 }
 
 
-function useLoginInterface(props){
+function LoginInterface(props){
     let email=props.email;
     let password=props.password;
 
@@ -70,4 +83,4 @@ function ResetPass(email,callback){
 }
 
 
-export {useLoginInterface,CheckSignIn,ResetPass};
+export {LoginInterface,CheckSignIn,ResetPass,VerifyCaptcha};

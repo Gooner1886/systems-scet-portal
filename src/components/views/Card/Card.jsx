@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Box } from '@mui/system'
 import { Typography ,TextField,} from '@material-ui/core'
 import { useNavigate } from "react-router-dom"
@@ -8,28 +8,49 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Container from '@material-ui/core/Container';
 import './Card.scss'
-import {useLoginInterface,CheckSignIn} from "../../Auth_Functionality"
+import {LoginInterface,CheckSignIn,VerifyCaptcha} from "../../Auth_Functionality"
 import Logged from '../../context'
+import ReCAPTCHA from 'react-google-recaptcha'
+
+
+const SITE_KEY="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
 
 export default function Card() {
 
+  const captcha_ref=useRef(null);
   const navigate=useNavigate();
   const [isLoggedIn,SetLogged]=useState(null);
   const user=useContext(Logged);
 
   
-  const HandleSubmit = (event) => {
+  const HandleSubmit = async (event) => {
         
         event.preventDefault();
         const data = new FormData(event.currentTarget);
 
-        
         let email=data.get('email');
         let password=data.get('password');
 
-        console.log(useLoginInterface({"email":email,"password":password,"setter":user.setter}));
-        console.log(CheckSignIn(SetLogged));
+        const token=captcha_ref.current.getValue();
+        captcha_ref.current.reset();
+
+        if(!token)
+        {
+          alert("Please fill out captcha");
+          return;
+        }
+
+        const success=await VerifyCaptcha(token);
+
+        if(success)
+        {
+          await LoginInterface({"email":email,"password":password,"setter":user.setter});
+          
+          console.log(CheckSignIn(SetLogged));
+        }
+        else
+          alert("Please fill out captcha");
   };
   
     
@@ -77,6 +98,12 @@ export default function Card() {
                 border: 'none',
               }}
             />
+            
+            <ReCAPTCHA
+              sitekey={SITE_KEY}
+              ref={captcha_ref}
+            />
+
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2" style={{
@@ -91,6 +118,7 @@ export default function Card() {
                 justifyContent: 'space-between',
 
             }}>
+
             <Button
               type="submit"
               variant="contained"
