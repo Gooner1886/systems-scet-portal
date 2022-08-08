@@ -2,19 +2,19 @@ import React from 'react'
 import { Box } from '@mui/system'
 import { Typography ,TextField,} from '@material-ui/core'
 import { useNavigate } from "react-router-dom"
-import { useEffect, useState,useContext } from "react"
+import {  useState,useRef} from "react"
 import { Button, } from '@mui/material';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Container from '@material-ui/core/Container';
 import './ResetPassword.scss'
-import {ResetPass} from "../../Auth_Functionality"
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {ResetPass,VerifyCaptcha} from "../../Auth_Functionality"
 import Navbar from '../../views/Navbar/Navbar'
+import ReCAPTCHA from 'react-google-recaptcha'
 
+const SITE_KEY="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
 export default function ResetPassword() {
 
+  const captcha_ref=useRef(null);
   const navigate=useNavigate();
   const [email_sent,setsuccess]=useState(false);
   
@@ -25,7 +25,21 @@ export default function ResetPassword() {
         
         let email=data.get('email');
 
-        await ResetPass(email,setsuccess);
+        const token=captcha_ref.current.getValue();
+        captcha_ref.current.reset();
+
+        if(!token)
+        {
+          alert("Please fill out captcha");
+          return;
+        }
+
+        const success=await VerifyCaptcha(token);
+
+        if(success)
+          await ResetPass(email,setsuccess);
+        else
+          alert("Please fill out captcha");
   };
 
   return (
@@ -53,7 +67,13 @@ export default function ResetPassword() {
               style={{
                 backgroundColor: '#fff',
                 border: 'none',
+                marginBottom:"1rem"
               }}
+            />
+            
+            <ReCAPTCHA
+              sitekey={SITE_KEY}
+              ref={captcha_ref}
             />
             
             <Box style={{
