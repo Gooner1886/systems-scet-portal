@@ -26,11 +26,11 @@ function LineChart()
     );
 
     return(<React.Fragment>
-        <div className='container-fluid mt-3 mb-3'>
+        <div className='container-fluid mt-3 mb-3' style={{margin: "0rem 2rem 0rem 5rem"}}>
                      
           <Chart type='line'
-          width={500}
-          height={550}
+          width={400}
+          height={350}
           series={product}
           options={option }
           >

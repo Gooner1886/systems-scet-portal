@@ -9,7 +9,7 @@ function BarChart() {
 
         <Chart
           type="bar"
-          width={1380}
+          width={1100}
           height={700}
           series={[
             {
