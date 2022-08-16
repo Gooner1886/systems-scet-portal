@@ -96,7 +96,7 @@ export default function StudentSection() {
         }}
       >
         <Link to='/'>
-          <img src={logo} alt='logo' style={{width: '4rem', height: '3rem',marginRight:'45rem', backgroundColor:"white"}}/>
+          <img src={logo} alt='logo' style={{width: '7rem', height: '5rem',marginRight:'45rem', backgroundColor:"white"}}/>
         </Link>
         <h1
           style={{
