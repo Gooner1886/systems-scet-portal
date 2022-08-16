@@ -1,6 +1,7 @@
 import { List, ListItemText,AppBar,ListItem,Button ,Divider} from '@mui/material'
 import { Box, Container,} from '@mui/system'
 import React, { useContext } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import './Navbar.scss'
 import logo from '../../../Assets/logo.png'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -62,7 +63,13 @@ export default function Navbar() {
                     </ListItem>
                     <Divider />
                     <ListItem  className='nav__main-list-item'>
-                        <ListItemText  primary='Student Corner' />
+                      <Link to='/student-section' className='nav__main-list-item-link' style={{
+                          textDecoration: 'none',
+                          color: '#000',
+                          fontWeight: '500',
+                      }}>
+                        Student Corner
+                      </Link>
                     </ListItem>
                     <Divider />
 

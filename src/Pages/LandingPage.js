@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import "react-multi-carousel/lib/styles.css";
 import logo from "../Assets/logo.png";
 import lady from "../Assets/lady.jpg";
-// import Chart from "../components/views/Chart/Chart";
 import ImageCard from "../components/views/ImageCard/ImageCard";
 
 import "./LandingPage.css";
