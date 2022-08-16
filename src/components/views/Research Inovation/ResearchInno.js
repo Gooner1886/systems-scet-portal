@@ -13,6 +13,7 @@ import Publication from '../Card/Publication';
 import Research from '../Card/Research';
 import logo from '../../../Assets/logo.png'
 import Footer from '../Footer';
+import { Link } from 'react-router-dom';
 
 const blue = {
   5: "#931F1D",
@@ -91,8 +92,13 @@ export default function ResearchInno() {
         <AppBar
         style={{
           backgroundColor: "#273872",
+          display:'flex',
+          flexDirection: 'row'
         }}
       >
+        <Link to='/'>
+          <img src={logo} alt='logo' style={{width: '7rem', height: '5rem',marginRight:'45rem', backgroundColor:"white"}}/>
+        </Link>
         <h1
           style={{
             textAlign: "center",
@@ -100,6 +106,7 @@ export default function ResearchInno() {
         >
           Research & Innovation
         </h1>
+
       </AppBar>
 
       <TabsUnstyled

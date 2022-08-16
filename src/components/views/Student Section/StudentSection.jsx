@@ -12,6 +12,7 @@ import TimeTableCard from '../Card/TimeTableCard';
 import CapstoneCard from '../Card/CapstoneCard';
 import logo from '../../../Assets/logo.png'
 import Footer from '../Footer';
+import { Link } from 'react-router-dom';
 
 const blue = {
   5: "#931F1D",
@@ -90,8 +91,13 @@ export default function StudentSection() {
         <AppBar
         style={{
           backgroundColor: "#273872",
+          display:'flex',
+          flexDirection: 'row'
         }}
       >
+        <Link to='/'>
+          <img src={logo} alt='logo' style={{width: '4rem', height: '3rem',marginRight:'45rem', backgroundColor:"white"}}/>
+        </Link>
         <h1
           style={{
             textAlign: "center",
