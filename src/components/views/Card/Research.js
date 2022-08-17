@@ -22,7 +22,6 @@ const Research = () => {
         Add Project
       </Button>
       <PieChart />
-      <Footer />
     </>
   );
 };

@@ -14,6 +14,7 @@ import Research from '../Card/Research';
 import logo from '../../../Assets/logo.png'
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 const blue = {
   5: "#931F1D",
@@ -89,16 +90,19 @@ const TabsList = styled(TabsListUnstyled)`
 export default function ResearchInno() {
   return (
     <>
+      <Navbar />
         <AppBar
         style={{
           backgroundColor: "#273872",
           display:'flex',
-          flexDirection: 'row'
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginTop: '95px'
         }}
       >
-        <Link to='/'>
+        {/* <Link to='/'>
           <img src={logo} alt='logo' style={{width: '7rem', height: '5rem',marginRight:'45rem', backgroundColor:"white"}}/>
-        </Link>
+        </Link> */}
         <h1
           style={{
             textAlign: "center",
@@ -112,7 +116,7 @@ export default function ResearchInno() {
       <TabsUnstyled
         defaultValue={0}
         style={{
-          marginTop: "100px",
+          marginTop: "200px",
           marginBottom: "100px",
         }}
       >
@@ -159,6 +163,7 @@ export default function ResearchInno() {
           <Patent />
         </TabPanel>
       </TabsUnstyled>
+      <Footer />
     </>
   )
 }

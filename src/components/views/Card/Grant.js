@@ -20,7 +20,7 @@ const Grant = () => {
       >
         Add Grant
       </Button>
-      <BarChart />
+      <BarChart heading='Grants and other revenue generation' subHeading='Grants since 2017' bottomHeader='Grants'/>
     </>
   );
 };

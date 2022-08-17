@@ -13,7 +13,7 @@ h1 .head{
     text-align: center;
 }
 .img{
-    padding: 100px
+    padding-top: 5rem;
 }
 .content{
     display: flex;
@@ -32,7 +32,6 @@ h1 .head{
 }
 .one{
     text-align: center;
-    /* padding-left: 5rem; */
 }
 .three{
     padding-left: 5rem;
@@ -45,4 +44,8 @@ h1 .head{
 .lcard{
     display :grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header{
+    padding-top:5rem
 }

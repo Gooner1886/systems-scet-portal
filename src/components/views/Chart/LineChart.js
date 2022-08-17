@@ -20,7 +20,8 @@ function LineChart()
             },
             yaxis:{
                 title:{text:"Citation in K"}                 
-            }
+            },
+            colors:["#3d7cd4"],
 
         }
     );
@@ -32,7 +33,7 @@ function LineChart()
           width={400}
           height={350}
           series={product}
-          options={option }
+          options={option}
           >
           </Chart>
 

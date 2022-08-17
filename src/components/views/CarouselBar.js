@@ -50,6 +50,9 @@
 
 import React, { Component } from "react";
 import Slider from "react-slick";
+import Carousel1 from '../../Assets/Carousel1.png'
+import Carousel2 from '../../Assets/Carousel2.png'
+import Carousel3 from '../../Assets/Carousel3.png'
 
 export default class CarouselBar extends Component {
   render() {
@@ -61,18 +64,22 @@ export default class CarouselBar extends Component {
       slidesToScroll: 1
     };
     return (
-      <div style={{ margin:' 8% 5%',paddingTop: '15rem', backgroundColor:'#d9d9d9'}}>
+      // <div style={{ margin:' 8% 5%'}}>
+      <div style={{marginTop:'8%', marginLeft:'5%'}}>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <img src={Carousel1} alt='Carousel1' style={{width:'105rem'}} />
+            {/* <h3>1</h3> */}
           </div>
           <div>
-            <h3>2</h3>
+            {/* <h3>2</h3> */}
+            <img src={Carousel2} alt='Carousel1' style={{width:'105rem'}} />
           </div>
           <div>
-            <h3>3</h3>
+            {/* <h3>3</h3> */}
+            <img src={Carousel3} alt='Carousel1' style={{width:'105rem'}} />
           </div>
-          <div>
+          {/* <div>
             <h3>4</h3>
           </div>
           <div>
@@ -80,7 +87,7 @@ export default class CarouselBar extends Component {
           </div>
           <div>
             <h3>6</h3>
-          </div>
+          </div> */}
         </Slider>
       </div>
     );

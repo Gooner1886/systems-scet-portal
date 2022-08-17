@@ -1,11 +1,10 @@
 import React from "react";
 import Chart from "react-apexcharts";
 
-function BarChart() {
+function BarChart(props) {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem',backgroundColor:'#87ceeb'}} >
-        <h3 className="text-center mt-3 mb-3">Total Citations</h3>
+      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem'}} >
 
         <Chart
           type="bar"
@@ -13,22 +12,22 @@ function BarChart() {
           height={700}
           series={[
             {
-              name: "citations",
+              name: `${props.bottomHeader}`,
               data: [6578, 6787, 3245, 9876, 2324, 5123, 2435],
             },
           ]}
           options={{
             title: {
-              text: "Total Citations by type",
+              text: `${props.heading}`,
               style: { fontSize: 30 },
             },
 
             subtitle: {
-              text: "Citations sice 2017",
+              text: `${props.subHeading}`,
               style: { fontSize: 18 },
             },
 
-            colors: ["blue"],
+            colors: ["#357cd2"],
             theme: { mode: "light" },
 
             xaxis: {
@@ -43,7 +42,7 @@ function BarChart() {
                 "G",
               ],
               title: {
-                text: "Citations",
+                text: `${props.bottomHeader}`,
                 style: { color: "black", fontSize: 30 },
               },
             },

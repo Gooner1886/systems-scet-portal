@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 function GroupedBarChart() {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem',backgroundColor:'#87ceeb'}} >
+      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem'}} >
         <h3 className="text-center mt-3 mb-3">Total Citations</h3>
 
         <Chart
@@ -32,7 +32,7 @@ function GroupedBarChart() {
               style: { fontSize: 18 },
             },
 
-            colors: ["blue"],
+            colors: ["#2e657b","#de586d"],
             theme: { mode: "light" },
 
             xaxis: {

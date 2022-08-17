@@ -19,7 +19,7 @@ const Patent = () => {
       >
         Add Patent
       </Button>
-      <BarChart />
+      <BarChart heading='Total Patnts' subHeading='Patents since 2017' bottomHeader='Patents'/>
     </>
   )
 }
