@@ -4,13 +4,11 @@ import Chart from "react-apexcharts";
 function GroupedBarChart() {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem'}} >
+      <div>
         <h3 className="text-center mt-3 mb-3">Total Citations</h3>
 
         <Chart
           type="bar"
-          width={1380}
-          height={700}
           series={[
             {
               name: "A",

@@ -28,11 +28,12 @@ function PieChart()
 
     return(
         <React.Fragment>
-            <div className="container-fluid mb-3">
+            {/* <div className="container-fluid mb-3"> */}
+            <div>
                 <Chart 
                 type="pie"
-                height={550}
-                width={1349}
+                // height={550}
+                // width={1349}
 
                 // series={[
                 //     {

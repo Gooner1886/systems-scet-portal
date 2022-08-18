@@ -114,8 +114,10 @@ const LandingPage = () => {
             <ImageCard />
           </div>
         </div>
-
-        <BarChart heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
+        <div style={{margin:'2rem 5rem',padding:'5rem',height:'700px',width:'1100px'}}>
+          <BarChart heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
+        </div>
+        
 
         <div className="lgraph">
           <div style={{ paddingRight: "3rem" }}>

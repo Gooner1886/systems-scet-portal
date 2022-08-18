@@ -4,12 +4,12 @@ import Chart from "react-apexcharts";
 function BarChart(props) {
   return (
     <React.Fragment>
-      <div className="container-fluid mb-5" style={{margin:'2rem 5rem',padding:'5rem'}} >
+      <div>
 
         <Chart
           type="bar"
-          width={1100}
-          height={700}
+          // width={1100}
+          // height={700}
           series={[
             {
               name: `${props.bottomHeader}`,
