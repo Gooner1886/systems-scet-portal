@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
-function GroupedBarChart() {
+function GroupedBarChart(props) {
   const seriesArray = [
     {
       name: "A",
-      data: [6578, 6787, 3245, 9876, 2324, 5123, 2435],
+      data: props.data1,
     },
     {
         name: "B",
-        data: [657, 678, 324, 987, 232, 512, 243],
+        data: props.data2,
     },
   ]
   const [series, setSeries] = useState(seriesArray)

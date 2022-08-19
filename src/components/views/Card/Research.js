@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import Button from "@mui/material/Button";
 import PieChart from "../Chart/PieChart";
 
 const Research = () => {
+  const [data, setData] = useState([23, 11, 54, 72, 12])
   return (
     <>
       <div>
@@ -22,7 +23,9 @@ const Research = () => {
           Add Project
         </Button>
         <div style={{padding:'1vw', width:'35vw',marginLeft:'27vw',marginTop:'2vw'}}>
-        <PieChart />
+        <PieChart
+        data={data}
+         />
         </div>
       </div>
     </>

@@ -1,19 +1,19 @@
 import React,{useState} from 'react';
 import Chart from 'react-apexcharts';
-function LineChart()
+function LineChart(props)
 {
     const[series, setSeries]= useState(
         [
             {
                 name:"Citations",
-                data:[234,45,67,987,345,456]
+                data:props.data
             }
         ]
     );
 
     const[option, setOption]= useState(
         {
-            title:{ text:"Journal Citation"},
+            title:{ text:`${props.title}`},
             xaxis:{
                 title:{text:"Citation"},
                 categories:['2017','2018','2019','2020','2021','2022','Jul','Aug','Sep','Oct','Nov','Dec']

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/views/Footer";
 import Navbar from "../components/views/Navbar/Navbar";
 import CarouselBar from "../components/views/CarouselBar";
@@ -12,6 +12,12 @@ import AwardsLanding from "../components/views/Card/AwardsLanding";
 import ResearchLanding from "../components/views/Card/ResearchLanding";
 
 const LandingPage = () => {
+  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435]
+  const [data,setData] = useState(chartData)
+
+  const [jc,setJc] = useState([234,45,67,987,345,456])
+  const [bc,setBc] = useState([234,45,67,987,345,456])
+  const [cc,setCc] = useState([234,45,67,987,345,456])
   return (
     <>
       <Navbar />
@@ -128,18 +134,27 @@ const LandingPage = () => {
               <ResearchLanding />
           </div>
         </div>
-
-        <BarChart heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
+        
+        <BarChart data={data} heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
 
         <div className="lgraph">
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart />
+            <LineChart
+              data={jc}
+              title='Journal Citations'
+             />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart />
+            <LineChart
+              data={bc}
+              title='Book Citations'
+             />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart />
+            <LineChart
+              data={cc}
+              title='Conference Citations'
+             />
           </div>
         </div>
       </div>

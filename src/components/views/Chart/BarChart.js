@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
 function BarChart(props) {
+  console.log(props)
   const seriesArray = [
     {
       name:`${props.bottomHeader}`,
-      data:[6578, 6787, 3245, 9876, 2324, 5123, 2435]
+      // data:[6578, 6787, 3245, 9876, 2324, 5123, 2435]
+      data:props.data
     }
   ]
   const [series, setSeries] = useState(seriesArray)

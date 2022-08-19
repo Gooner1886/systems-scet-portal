@@ -1,7 +1,7 @@
 // import React ,{ useState, useEffect} from "react";
 import React, { useState } from "react";
 import  Chart  from "react-apexcharts";
-function PieChart()
+function PieChart(props)
 {
 //    const [stdudentSubject, setStudentsubject]= useState([]);
 //    const [studentMarks, setStudentMarks]= useState([]);
@@ -25,7 +25,7 @@ function PieChart()
 //     getStudentdata();
 
 //    },[]);
-    const [series,setSeries] = useState([23, 11, 54, 72, 12])
+    const [series,setSeries] = useState(props.data)
     const [option, setOption] = useState({
         colors:["#357cd2","#e56590","#00bdae","#404041"],
         labels:["A","B","C","D","E"]
