@@ -83,6 +83,7 @@ export default function Navbar() {
                   textDecoration: "none",
                   color: "#000",
                   fontWeight: "500",
+                  fontSize: '1.3rem',
                 }}
               >
                 Student Corner
@@ -98,6 +99,7 @@ export default function Navbar() {
                   textDecoration: "none",
                   color: "#000",
                   fontWeight: "500",
+                  fontSize: '1.3rem',
                 }}
               >
                 Research & Innovation

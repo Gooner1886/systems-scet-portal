@@ -19,14 +19,15 @@ h1 .head{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
-    padding-right: 400px;
+    gap: 100px;
+    padding-right: 30px;
     margin-bottom: 50px;
 }
 .awards{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    margin-left: 5.5rem;
     align-items: center;
     
 }
@@ -44,8 +45,16 @@ h1 .head{
 .lcard{
     display :grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 7rem;
+    margin-left: 1rem;
 }
 
 .header{
-    padding-top:5rem
+    padding-top:3rem;
+    margin-left: 6rem;
+}
+
+.header1{
+    padding-top:3rem;
+    margin-left: 1.5rem;
 }
