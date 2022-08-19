@@ -23,7 +23,7 @@ const Grant = () => {
         >
           Add Grant
         </Button>
-        <div style={{padding:'1vw', width:'55vw',height:'30vw',marginTop:'2vw',marginLeft:'15vw'}}>
+        <div style={{padding:'1vw', width:'55vw',height:'30vw',marginTop:'2vw',marginLeft:'15vw',marginBottom:'10vw'}}>
         <BarChart
           heading="Grants and other revenue generation"
           subHeading="Grants since 2017"

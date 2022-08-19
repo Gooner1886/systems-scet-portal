@@ -20,7 +20,7 @@ const Patent = () => {
         >
           Add Patent
         </Button>
-        <div style={{padding:'1vw', width:'55vw',height:'30vw',marginTop:'2vw',marginLeft:'15vw'}}>
+        <div style={{padding:'1vw', width:'55vw',height:'30vw',marginTop:'2vw',marginLeft:'15vw',marginBottom:'10vw'}}>
         <BarChart
           heading="Total Patents"
           subHeading="Patents since 2017"
