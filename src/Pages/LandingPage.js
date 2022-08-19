@@ -1,14 +1,21 @@
+
+
 import React from "react";
 import Footer from "../components/views/Footer";
 import Navbar from "../components/views/Navbar/Navbar";
 import CarouselBar from "../components/views/CarouselBar";
+import Grid from "@mui/material/Grid";
 import "react-multi-carousel/lib/styles.css";
-import logo from "../Assets/logo.png";
+import logo2 from "../Assets/logo2.png";
+import lady from "../Assets/lady.jpg";
 import ImageCard from "../components/views/ImageCard/ImageCard";
 
 import "./LandingPage.css";
 import BarChart from "../components/views/Chart/BarChart";
 import LineChart from "../components/views/Chart/LineChart";
+import { Container } from "@mui/material";
+import AwardsLanding from "../components/views/Card/AwardsLanding";
+import ResearchLanding from "../components/views/Card/ResearchLanding";
 
 const LandingPage = () => {
   return (
@@ -19,17 +26,25 @@ const LandingPage = () => {
         <div className="content">
           <div>
             <img
-              src={logo}
+              src={logo2}
               alt="logo"
-              style={{ height: "16rem", width: "20rem" }}
+              style={{ height: "20rem", width: "20rem" }}
               className="img"
             />
           </div>
-          <div>
-            <h1 className="head">
+          <div style={{
+            paddingTop: "4rem",
+          }}>
+            <h1 className="head" style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              paddingLeft: "1rem",
+            }}>
               School of Computer Engineering and Technology
             </h1>
-            <div className="para">
+            <div className="para" style={{
+              width: "50rem",
+            }}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 odio arcu, sollicitudin at risus semper, consequat ultrices
@@ -42,7 +57,7 @@ const LandingPage = () => {
                 efficitur nulla ipsum, ac mattis leo sagittis id. Aliquam erat
                 volutpat. Quisque vitae tempor quam. Proin a ligula vel purus
                 pharetra commodo quis eget leo. Nullam placerat vitae erat quis
-                viverra.
+                viverra. 
               </p>
             </div>
           </div>
@@ -59,7 +74,16 @@ const LandingPage = () => {
           </div>
           <div>
             <div className="para">
-              <p>
+            <h1 className="head" style={{
+              marginLeft: '1.5rem',
+            }}>
+              Dr. Vrushali Kulkarni Head of School and Professor
+            </h1>
+              <p style={{
+              width: "50rem",
+              paddingRight: "30px",
+
+            }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 odio arcu, sollicitudin at risus semper, consequat ultrices
                 felis. Morbi tellus turpis, euismod quis maximus vehicula,
@@ -74,47 +98,44 @@ const LandingPage = () => {
                 viverra.
               </p>
             </div>
-            <h1 className="head">
-              Dr. Vrushali Kulkarni Head of School and Professor
-            </h1>
           </div>
         </div>
         <h1 className="header">Awards & Achievements</h1>
+
         <div className="awards">
           <div className="one">
             <div style={{padding:'5rem 0rem'}}>
-              <ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." />{" "}
+              <AwardsLanding />
             </div>
             <div>
-              <ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." />{" "}
+             <AwardsLanding/>
             </div>
           </div>
 
           <div className="three">
             <div style={{padding:'5rem 0rem'}}>
-              <ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." />{" "}
+             <AwardsLanding/>
             </div>
             <div>
-              <ImageCard content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio arcu, sollicitudin at risus semper, consequat ultrices felis." />{" "}
+             <AwardsLanding/>
             </div>
           </div>
         </div>
-        <h1 className="header">Research & Publication</h1>
+
+        <h1 className="header1">Research & Publication</h1>
         <div className="lcard">
-          <div style={{paddingTop:'5rem'}}>
-            <ImageCard />
+          <div style={{paddingTop:'2rem'}}>
+            <ResearchLanding />
           </div>
-          <div style={{paddingTop:'5rem'}}>
-            <ImageCard />
+          <div style={{paddingTop:'2rem'}}>
+             <ResearchLanding />
           </div>
-          <div style={{paddingTop:'5rem'}}>
-            <ImageCard />
+          <div style={{paddingTop:'2rem'}}>
+              <ResearchLanding />
           </div>
         </div>
-        <div style={{margin:'2rem 5rem',padding:'5rem',height:'700px',width:'1100px'}}>
-          <BarChart heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
-        </div>
-        
+
+        <BarChart heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
 
         <div className="lgraph">
           <div style={{ paddingRight: "3rem" }}>

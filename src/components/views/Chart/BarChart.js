@@ -7,6 +7,12 @@ function BarChart(props) {
       <div>
 
         <Chart
+         style={{
+          paddingTop: '2rem',
+          width: '70rem',
+          height: '20rem',
+          marginLeft: '5rem',
+        }}
           type="bar"
           // width={1100}
           // height={700}
@@ -14,12 +20,15 @@ function BarChart(props) {
             {
               name: `${props.bottomHeader}`,
               data: [6578, 6787, 3245, 9876, 2324, 5123, 2435],
+              style: [{
+                marginBottom: '2rem',
+              }]
             },
           ]}
           options={{
             title: {
               text: `${props.heading}`,
-              style: { fontSize: 30 },
+              style: { fontSize: 30, marginBottom: "1rem" },
             },
 
             subtitle: {
