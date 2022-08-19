@@ -1,19 +1,13 @@
-
-
 import React from "react";
 import Footer from "../components/views/Footer";
 import Navbar from "../components/views/Navbar/Navbar";
 import CarouselBar from "../components/views/CarouselBar";
-import Grid from "@mui/material/Grid";
 import "react-multi-carousel/lib/styles.css";
 import logo2 from "../Assets/logo2.png";
-import lady from "../Assets/lady.jpg";
-import ImageCard from "../components/views/ImageCard/ImageCard";
 
 import "./LandingPage.css";
 import BarChart from "../components/views/Chart/BarChart";
 import LineChart from "../components/views/Chart/LineChart";
-import { Container } from "@mui/material";
 import AwardsLanding from "../components/views/Card/AwardsLanding";
 import ResearchLanding from "../components/views/Card/ResearchLanding";
 

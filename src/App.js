@@ -12,7 +12,7 @@ import ResearchInno from './components/views/Research Inovation/ResearchInno';
 const App = () => {
   const [logged, setlogged] = useState(false); //for checking if user is logged in
   return (
-    <>
+    <div className='font'>
     <Logged.Provider value={{ value: logged, setter: setlogged }}>
       <Routes>
         <Route exact path="/" element={<LandingPage/>}/>
@@ -22,7 +22,7 @@ const App = () => {
         <Route exact path="/research-innovation" element={<ResearchInno />} />
       </Routes>
     </Logged.Provider>
-    </>
+    </div>
   )
 }
 
