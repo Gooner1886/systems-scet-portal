@@ -30,10 +30,14 @@ function LineChart()
         <div className='container-fluid mt-3 mb-3' style={{margin: "0rem 2rem 0rem 5rem"}}>
                      
           <Chart type='line'
-          width={400}
-          height={350}
+          width={300}
+          height={250}
           series={product}
           options={option}
+          style={{
+            paddingTop: '2rem',
+            marginTop: '2rem',
+          }}
           >
           </Chart>
 

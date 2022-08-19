@@ -48,9 +48,11 @@
 
 // export default CarouselBar
 
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import Slider from "react-slick";
-import Carousel1 from '../../Assets/Carousel1.png'
+import Carousel1 from '../../Assets/banner1.png'
 import Carousel2 from '../../Assets/Carousel2.png'
 import Carousel3 from '../../Assets/Carousel3.png'
 
@@ -65,30 +67,75 @@ export default class CarouselBar extends Component {
     };
     return (
       // <div style={{ margin:' 8% 5%'}}>
-      <div style={{marginTop:'8%', marginLeft:'5%'}}>
-        <Slider {...settings}>
-          <div>
-            <img src={Carousel1} alt='Carousel1' style={{width:'105rem'}} />
-            {/* <h3>1</h3> */}
-          </div>
-          <div>
-            {/* <h3>2</h3> */}
-            <img src={Carousel2} alt='Carousel1' style={{width:'105rem'}} />
-          </div>
-          <div>
-            {/* <h3>3</h3> */}
-            <img src={Carousel3} alt='Carousel1' style={{width:'105rem'}} />
-          </div>
-          {/* <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div> */}
-        </Slider>
+      <
+      div style = {
+        {
+          marginTop: '8%',
+          marginLeft: '5%',
+          marginRight: '5%',
+          marginBottom: '2%',
+          border: 'none'
+        }
+      } >
+      <
+      Slider {
+        ...settings
+      } >
+      <
+      div >
+      <
+      img src = {
+        Carousel1
+      }
+      alt = 'Carousel1'
+      style = {
+        {
+          width: '85rem',
+          padding: '10px',
+          border: 'none'
+          //backgroundSize: 'contain',
+        }
+      }
+      /> {
+        /* <h3>1</h3> */ } </div> <div > {
+        /* <h3>2</h3> */ } <
+      img src = {
+        Carousel2
+      }
+      alt = 'Carousel1'
+      style = {
+        {
+          width: '105rem',
+          border: 'none'
+        }
+      }
+      /> 
+      </div> <
+      div > {
+        /* <h3>3</h3> */ } <
+      img src = {
+        Carousel3
+      }
+      alt = 'Carousel1'
+      style = {
+        {
+          width: '105rem',
+          border: 'none'
+        }
+      }
+      /> 
+      </div> {
+        /* <div>
+                    <h3>4</h3>
+                  </div>
+                  <div>
+                    <h3>5</h3>
+                  </div>
+                  <div>
+                    <h3>6</h3>
+                  </div> */
+      } 
+      </Slider> 
       </div>
     );
   }
