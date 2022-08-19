@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import PieChart from "../Chart/PieChart";
-import Footer from "../Footer";
 
 const Research = () => {
   return (

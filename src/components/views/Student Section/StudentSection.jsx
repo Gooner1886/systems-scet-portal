@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar,Box } from "@mui/material";
+import { AppBar} from "@mui/material";
 import { styled } from "@mui/system";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
@@ -10,9 +10,7 @@ import Clubcard from '../Card/Clubcard';
 import CircularCard from '../Card/CircularCard'
 import TimeTableCard from '../Card/TimeTableCard';
 import CapstoneCard from '../Card/CapstoneCard';
-import logo from '../../../Assets/logo.png'
 import Footer from '../Footer';
-import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
 const blue = {
