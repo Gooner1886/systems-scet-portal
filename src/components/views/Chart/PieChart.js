@@ -1,5 +1,5 @@
 // import React ,{ useState, useEffect} from "react";
-import React from "react";
+import React, { useState } from "react";
 import  Chart  from "react-apexcharts";
 function PieChart()
 {
@@ -25,8 +25,13 @@ function PieChart()
 //     getStudentdata();
 
 //    },[]);
-
+    const [series,setSeries] = useState([23, 11, 54, 72, 12])
+    const [option, setOption] = useState({
+        colors:["#357cd2","#e56590","#00bdae","#404041"],
+        labels:["A","B","C","D","E"]
+    })
     return(
+        
         <React.Fragment>
             {/* <div className="container-fluid mb-3"> */}
             <div>
@@ -40,12 +45,10 @@ function PieChart()
                 //       data: [6578, 6787, 3245, 9876],
                 //     },
                 //   ]}
-                series = {[23, 11, 54, 72, 12]}               
+                // series = {[23, 11, 54, 72, 12]}          
+                series={series}    
 
-                options={{
-                    colors:["#357cd2","#e56590","#00bdae","#404041"],
-                    labels:["A","B","C","D","E"]
-                 }}
+                options={option}
                 >
                 </Chart>
             </div>
