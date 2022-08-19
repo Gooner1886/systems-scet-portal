@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Chart from 'react-apexcharts';
 function LineChart()
 {
-    const[product, setProduct]= useState(
+    const[series, setSeries]= useState(
         [
             {
                 name:"Citations",
@@ -32,7 +32,7 @@ function LineChart()
           <Chart type='line'
           width={300}
           height={250}
-          series={product}
+          series={series}
           options={option}
           style={{
             paddingTop: '2rem',
