@@ -8,6 +8,7 @@ import React from 'react'
 import ResetPassword from './components/views/ResetPassword/ResetPassword';
 import StudentSection from './components/views/Student Section/StudentSection';
 import ResearchInno from './components/views/Research Inovation/ResearchInno';
+import MainForm from './components/views/Form/MainForm';
 
 const App = () => {
   const [logged, setlogged] = useState(false); //for checking if user is logged in
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/reset" element={<ResetPassword/>} />
         <Route exact path="/student-section" element={<StudentSection/>} />
         <Route exact path="/research-innovation" element={<ResearchInno />} />
+        <Route exact path="/form" element={<MainForm />} />
       </Routes>
     </Logged.Provider>
     </div>
