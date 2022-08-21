@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import BarChart from "../Chart/BarChart";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 const Patent = () => {
-  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435]
-  const [data,setData] = useState(chartData)
+  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
+  const [data, setData] = useState(chartData);
   return (
     <>
       <div>
@@ -20,15 +21,26 @@ const Patent = () => {
             marginBottom: "10px",
           }}
         >
-          Add Patent
+          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
+            Add Patent
+          </Link>
         </Button>
-        <div style={{padding:'1vw', width:'55vw',height:'30vw',marginTop:'2vw',marginLeft:'15vw',marginBottom:'10vw'}}>
-        <BarChart
-          data={data}
-          heading="Total Patents"
-          subHeading="Patents since 2017"
-          bottomHeader="Patents"
-        />
+        <div
+          style={{
+            padding: "1vw",
+            width: "55vw",
+            height: "30vw",
+            marginTop: "2vw",
+            marginLeft: "15vw",
+            marginBottom: "10vw",
+          }}
+        >
+          <BarChart
+            data={data}
+            heading="Total Patents"
+            subHeading="Patents since 2017"
+            bottomHeader="Patents"
+          />
         </div>
       </div>
     </>

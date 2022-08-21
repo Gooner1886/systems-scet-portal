@@ -1,12 +1,13 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import GroupedBarChart from "../Chart/GroupedBarChart";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const Publication = () => {
-  const chartData1 = [6578, 6787, 3245, 9876, 2324, 5123, 2435]
-  const [data1,setData1] = useState(chartData1)
-  const chartData2 = [657, 678, 324, 987, 232, 512, 243]
-  const [data2,setData2] = useState(chartData2)
+  const chartData1 = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
+  const [data1, setData1] = useState(chartData1);
+  const chartData2 = [657, 678, 324, 987, 232, 512, 243];
+  const [data2, setData2] = useState(chartData2);
   return (
     <>
       <div>
@@ -23,7 +24,9 @@ const Publication = () => {
             marginBottom: "10px",
           }}
         >
-          Add Publication
+          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
+            Add Publication
+          </Link>
         </Button>
         <div
           style={{
@@ -34,10 +37,7 @@ const Publication = () => {
             marginLeft: "15vw",
           }}
         >
-          <GroupedBarChart
-            data1 = {data1}
-            data2 = {data2}
-           />
+          <GroupedBarChart data1={data1} data2={data2} />
         </div>
       </div>
     </>

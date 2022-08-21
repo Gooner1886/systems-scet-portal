@@ -15,7 +15,7 @@ function BarChart(props) {
   const [option, setOption] = useState({
     title: {
       text: `${props.heading}`,
-      style: { fontSize: 30, marginBottom: "1rem" },
+      style: { fontSize: 25, marginBottom: "1rem" },
     },
 
     subtitle: {

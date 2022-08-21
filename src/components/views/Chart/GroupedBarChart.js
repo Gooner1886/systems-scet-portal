@@ -17,7 +17,7 @@ function GroupedBarChart(props) {
   const [option, setOption] = useState({
     title: {
       text: "Total Publications by type",
-      style: { fontSize: 30 },
+      style: { fontSize: 25,marginBottom:'1rem' },
     },
 
     subtitle: {
@@ -77,7 +77,6 @@ function GroupedBarChart(props) {
   return (
     <React.Fragment>
       <div>
-        <h3 className="text-center mt-3 mb-3">Total Citations</h3>
 
         <Chart
           type="bar"

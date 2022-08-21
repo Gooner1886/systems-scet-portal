@@ -1,9 +1,10 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import PieChart from "../Chart/PieChart";
+import { Link } from "react-router-dom";
 
 const Research = () => {
-  const [data, setData] = useState([23, 11, 54, 72, 12])
+  const [data, setData] = useState([23, 11, 54, 72, 12]);
   return (
     <>
       <div>
@@ -20,12 +21,19 @@ const Research = () => {
             marginBottom: "10px",
           }}
         >
-          Add Project
+          <Link to="/form" style={{ textDecoration: "none",color:'white' }}>
+            Add Project
+          </Link>
         </Button>
-        <div style={{padding:'1vw', width:'35vw',marginLeft:'27vw',marginTop:'2vw'}}>
-        <PieChart
-        data={data}
-         />
+        <div
+          style={{
+            padding: "1vw",
+            width: "35vw",
+            marginLeft: "27vw",
+            marginTop: "2vw",
+          }}
+        >
+          <PieChart data={data} />
         </div>
       </div>
     </>

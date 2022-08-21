@@ -90,7 +90,7 @@ export default class CarouselBar extends Component {
       alt = 'Carousel1'
       style = {
         {
-          width: '85rem',
+          width: '102.25rem',
           padding: '10px',
           border: 'none'
           //backgroundSize: 'contain',
@@ -105,7 +105,7 @@ export default class CarouselBar extends Component {
       alt = 'Carousel1'
       style = {
         {
-          width: '105rem',
+          width: '102.25rem',
           border: 'none'
         }
       }
@@ -119,7 +119,7 @@ export default class CarouselBar extends Component {
       alt = 'Carousel1'
       style = {
         {
-          width: '105rem',
+          width: '102.25rem',
           border: 'none'
         }
       }
