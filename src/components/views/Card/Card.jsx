@@ -61,7 +61,7 @@ export default function Card() {
   return (
     <>
     <Container maxWidth= 'sm' className='contain'>
-    {isLoggedIn?navigate("/"):undefined}
+    {isLoggedIn?navigate("/about"):undefined}
          <Box   className='login' style={{
                 marginTop: '150px',
                 marginLeft: '15%',

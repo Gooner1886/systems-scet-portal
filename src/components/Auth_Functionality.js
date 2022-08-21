@@ -8,8 +8,21 @@ const API_KEY="AIzaSyAhgUECEcnMz7li38-C_nkJcltw536Kcx4";
 
 async function VerifyCaptcha(token){
     let status=false;
+
+    const headers = {
+        "content-type": "application/json",
+        "Authorization": "<token>"
+    };
     
-    await axios.post("http://localhost:3001/post",{token}).then(()=>{
+    await axios.post("http://localhost:3001",
+    {
+        query:`query VerifyCaptcha($token:String!){
+            Verify(token:$token)
+          }`,
+        variables:{
+            token:token
+        }
+    },headers).then(()=>{
         status=true; 
     }).catch(()=>{
         status=false;
