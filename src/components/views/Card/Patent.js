@@ -32,7 +32,7 @@ const Patent = () => {
             height: "30vw",
             marginTop: "2vw",
             marginLeft: "15vw",
-            marginBottom: "10vw",
+            marginBottom: "15vw",
           }}
         >
           <BarChart
