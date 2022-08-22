@@ -49,6 +49,7 @@ export default function clubcard() {
       justifyContent: "space-between",
       alignItems: "center",
       alignContent: "center",
+      fontFamily: "Poppins"
     }}>
      {
       card.map((key)=>{
@@ -83,6 +84,7 @@ export default function clubcard() {
               borderRadius: '10px',
               marginLeft: '50px',
               marginBottom: '10px',
+              fontFamily: 'Poppins'
             }}>Read More</Button>
           </CardActions>
         </Card>
