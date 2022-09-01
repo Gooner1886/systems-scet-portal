@@ -15,12 +15,13 @@ export default function AwardsLanding() {
           component="img"
           height="240"
           width="40"
-          image= {logo3}
+          image= {'https://media-exp1.licdn.com/dms/image/C4D22AQGsj4hnoncnzg/feedshare-shrink_800/0/1658406785905?e=1665014400&v=beta&t=Nike3e_KTCLCLonwfhu0C0qXCxxAyrW8HsOyuZU6AcM'}
           alt="green iguana"
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ipsum tellus, viverra non velit laoreet, auctor placerat enim.
+              The three students of our Engineering department have been selected by Amazon with a CTC of 44.14 Lakh* + 2.5 Lakh worth of employee benefits.
+              We couldn't have been prouder!
           </Typography>
         </CardContent>
       </CardActionArea>
