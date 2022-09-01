@@ -84,7 +84,7 @@ const TabsList = styled(TabsListUnstyled)`
 `;
 
 
-export default function StudentSection() {
+export default function StudentSection(props) {
   return (
     <>
     <Navbar/>
@@ -151,7 +151,7 @@ export default function StudentSection() {
             <CircularCard />
         </TabPanel>
         <TabPanel value={1}>
-          <Clubcard />
+          <Clubcard cards={props.cards}/>
         </TabPanel>
         <TabPanel value={2}>
           <CapstoneCard />

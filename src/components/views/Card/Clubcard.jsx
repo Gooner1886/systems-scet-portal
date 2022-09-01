@@ -10,33 +10,34 @@ import { Container } from "@mui/system";
 import ihlogo from '../../../Assets/Ih-logo.png';
 import swe from '../../../Assets/swe-logo.png';
 import gdsc from '../../../Assets/gdsc-logo.png';
+import { Link } from "react-router-dom";
 
-export default function clubcard() {
+export default function clubcard(props) {
 
-  const card = [
+  // const card = [
 
-    {
-      title: 'Innovators Hub',
-      description: 'The major goal of Innovators Hub, which...',
-      img : ihlogo,
+  //   {
+  //     title: 'Innovators Hub',
+  //     description: 'The major goal of Innovators Hub, which...',
+  //     img : ihlogo,
       
-    },
+  //   },
 
-    {
-      title: 'SWE',
-      description: 'Summary : The Society of Women Engineer...',
-      img : swe,
-    },
+  //   {
+  //     title: 'SWE',
+  //     description: 'Summary : The Society of Women Engineer...',
+  //     img : swe,
+  //   },
 
-    {
-      title: 'GDSC',
-      description: 'Google Developer Student Clubs (GDSC)...',
-      img : gdsc,
-    },
+  //   {
+  //     title: 'GDSC',
+  //     description: 'Google Developer Student Clubs (GDSC)...',
+  //     img : gdsc,
+  //   },
 
     
   
-  ]
+  // ]
    
 
   return (
@@ -52,13 +53,13 @@ export default function clubcard() {
       fontFamily: "Poppins"
     }}>
      {
-      card.map((key)=>{
+      props.cards.map((card, idx)=>{
         return(
           <Card sx={{ maxWidth: 280 , borderRadius: '20px', marginTop: '20px' }}>
           <CardMedia
             component="img"
             height="240"
-            image= {key.img}
+            image= {card.image}
             alt="green iguana"
             style={{
               width: '100%',
@@ -66,14 +67,15 @@ export default function clubcard() {
             }}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {key.title}
+            <Typography gutterBottom variant="h5" component="div" fontFamily="Poppins, sans-serif" fontWeight = "bold">
+              {card.name}
             </Typography>
             <Typography variant="body2" color="text.secondary" textAlign="left">
-              {key.description}
+              {card.description}
             </Typography>
           </CardContent>
-          <CardActions>
+          <CardActions style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <Link to={`${card.clubNo}`} style = {{textDecoration: "none"}}>  
             <Button size="small" style={{
               backgroundColor: '#931F1D',
               color: '#fff',
@@ -82,10 +84,9 @@ export default function clubcard() {
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: '10px',
-              marginLeft: '50px',
-              marginBottom: '10px',
+              margin: '10px 0px',
               fontFamily: 'Poppins'
-            }}>Read More</Button>
+            }}>Read More</Button></Link>
           </CardActions>
         </Card>
         )
