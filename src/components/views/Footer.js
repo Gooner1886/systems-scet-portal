@@ -7,6 +7,8 @@ import Link from "@mui/material/Link";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
   return (
@@ -17,10 +19,12 @@ const Footer = () => {
         bgcolor="#273872"
         color="white"
       >
-        <Container maxWidth="xl" style={{paddingLeft:'20rem'}}>
+        <Container maxWidth="xl" style={{ paddingLeft: "20rem" }}>
           <Grid container spacing={5} columns={25}>
             <Grid item xs={5} sm={4}>
-              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>SCET</Box>
+              <Box style={{ fontWeight: "bold", paddingBottom: "2rem" }}>
+                SCET
+              </Box>
               <Box>
                 <Link
                   href="/"
@@ -68,7 +72,9 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Support</Box>
+              <Box style={{ fontWeight: "bold", paddingBottom: "2rem" }}>
+                Support
+              </Box>
               <Box>
                 <Link
                   href="/"
@@ -116,7 +122,9 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Legal</Box>
+              <Box style={{ fontWeight: "bold", paddingBottom: "2rem" }}>
+                Legal
+              </Box>
               <Box>
                 <Link
                   href="/"
@@ -164,10 +172,12 @@ const Footer = () => {
             </Grid>
 
             <Grid item xs={5} sm={4}>
-              <Box style={{fontWeight:'bold', paddingBottom:'2rem'}}>Social</Box>
+              <Box style={{ fontWeight: "bold", paddingBottom: "2rem" }}>
+                Social
+              </Box>
               <Box>
                 <Link
-                  href="/"
+                  href="https://twitter.com/MITWPUOfficial"
                   color="inherit"
                   style={{
                     textDecoration: "none",
@@ -178,24 +188,35 @@ const Footer = () => {
               </Box>
               <Box>
                 <Link
-                  href="/"
+                  href="https://www.instagram.com/mitwpu_scet/"
                   color="inherit"
                   style={{
                     textDecoration: "none",
                   }}
                 >
-                  <YouTubeIcon color="white" />
+                  <InstagramIcon color="white" />
                 </Link>
               </Box>
               <Box>
                 <Link
-                  href="/"
+                  href="https://www.facebook.com/MITWPUOfficial"
                   color="inherit"
                   style={{
                     textDecoration: "none",
                   }}
                 >
                   <FacebookIcon color="white" />
+                </Link>
+              </Box>
+              <Box>
+                <Link
+                  href="https://www.linkedin.com/company/mitwpu-scet/"
+                  color="inherit"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <LinkedInIcon color="white" />
                 </Link>
               </Box>
             </Grid>

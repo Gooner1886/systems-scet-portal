@@ -6,8 +6,19 @@ import Accolades from "./Accolades";
 import Designation from "./Designation";
 import Introduction from "./Introduction";
 import PublicationsOverview from "./PublicationOverview";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Logged from "../../context";
 
 const About = () => {
+  const user = useContext(Logged);
+  const navigate = useNavigate();
+  console.log(user);
+
+  useEffect(() => {
+    if (!user.value) navigate("/login");
+  }, [user.value]);
+
   return (
     <>
       <Navbar />

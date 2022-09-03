@@ -23,38 +23,55 @@ const Designation = () => {
           alignItems={"center"}
           justifyContent={"space-evenly"}
         >
-          <Icon
-            as={LinkedInIcon}
-            cursor={"pointer"}
-            fontSize={"large"}
-            color={"primary"}
-          ></Icon>
-          <Icon
-            as={YouTubeIcon}
-            cursor={"pointer"}
-            fontSize={"large"}
-            sx={{ color: pink[600] }}
-          ></Icon>
-          <Icon
-            as={FacebookIcon}
-            cursor={"pointer"}
-            fontSize={"large"}
-            sx={{ color: blue[900] }}
-          ></Icon>
-          <Icon
-            as={TwitterIcon}
-            cursor={"pointer"}
-            fontSize={"large"}
-            color={"primary"}
-          ></Icon>
+          <a
+            href="https://www.linkedin.com/in/kishor-kolhe-1696317/"
+            alt="LinkedIn"
+          >
+            <Icon
+              as={LinkedInIcon}
+              cursor={"pointer"}
+              fontSize={"large"}
+              color={"primary"}
+            ></Icon>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCjAU8KWnxL44s5XqOxmIIfw"
+            alt="Youtube"
+          >
+            <Icon
+              as={YouTubeIcon}
+              cursor={"pointer"}
+              fontSize={"large"}
+              sx={{ color: pink[600] }}
+            ></Icon>
+          </a>
+
+          <a href="https://www.facebook.com/kishor.kolhe.50" alt="Facebook">
+            <Icon
+              as={FacebookIcon}
+              cursor={"pointer"}
+              fontSize={"large"}
+              sx={{ color: blue[900] }}
+            ></Icon>
+          </a>
+
+          <a href="https://twitter.com/kishorkolhe6" alt="Twitter">
+            <Icon
+              as={TwitterIcon}
+              cursor={"pointer"}
+              fontSize={"large"}
+              color={"primary"}
+            ></Icon>
+          </a>
+
           <Stack
             direction={"column"}
             justifyContent={"flex-start"}
             alignItems={"center"}
             spacing={"2"}
           >
-            <h2 fontFamily={"Poppins"}>Dan Abramov, PHD</h2>
-            <p fontFamily={"Poppins"}>Professor of CSE</p>
+            <h2 fontFamily={"Poppins"}>Kishor Kolhe, PHD</h2>
+            <p fontFamily={"Poppins"}>Associate Professor of CSE</p>
             <p fontFamily={"Poppins"}>MITWPU</p>
           </Stack>
         </Stack>

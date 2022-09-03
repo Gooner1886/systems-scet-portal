@@ -16,7 +16,7 @@ const Introduction = () => {
       >
         <Avatar
           alt="Faculty name"
-          src="https://bit.ly/dan-abramov"
+          src="%PUBLIC_URL%/faculty photos/Kishor Kolhe.JPG"
           sx={{
             width: ["64px", "128px", "256px"],
             height: ["64px", "128px", "256px"],
@@ -29,27 +29,24 @@ const Introduction = () => {
           justifyContent={"flex-start"}
           flex={"0.5"}
         >
-          <p
-            fontFamily={"Poppins"}
-            style={{ textAlign: "left"}}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <p fontFamily={"Poppins"} style={{ textAlign: "left" }}>
+            Dr. Kishor R. Kolhe has spent more than 24 years in Engineering
+            Academics and Industry. Out of 11 years of Industry Experience he
+            worked as Deputy Manager and HOD, Prepress and Information
+            Technology Division of The Times of India, Pune for 9.5 years.
           </p>
           <br />
-          <p
-            fontFamily={"Poppins"}
-            style={{ textAlign: "left"}}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p fontFamily={"Poppins"} style={{ textAlign: "left" }}>
+            More than 13 years he worked in Engineering Academics in Computer
+            Engineering and Information Technology Departments in Savitribai
+            Phule Pune University and Bharati Vidyapeeth Deemed University,
+            Pune. He also worked as HOD, Department of Information Technology,
+            Trinity College of Engineering, Pune. He is working as CEO
+            (Examination), SPPU at MAEER’s MIT College of Engineering, Pune as
+            an additional administrative responsibility from last 6 years.
+            Currently he is working as an Associate Professor, CSE in School of
+            Computer Engineering and Technology, Dr. Vishwanath Karad MIT World
+            Peace University, Pune.
           </p>
         </Stack>
       </Stack>
