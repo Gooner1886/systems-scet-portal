@@ -19,6 +19,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer";
 
 const MainForm = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -34,9 +35,14 @@ const MainForm = () => {
   return (
     <div>
       <Navbar />
-      <p style={{fontSize:'2vw',marginTop:"10vw"}}><b>Add New Publication / Citation</b></p>
-      <p style={{fontSize:'1.4vw'}}>Add or update your new Citation or Research information if any to the form below</p>
-      <div style={{ paddingTop:'1vw',backgroundColor: "#fbfcf8" }}>
+      <p style={{ fontSize: "2vw", marginTop: "10vw" }}>
+        <b>Add New Publication / Citation</b>
+      </p>
+      <p style={{ fontSize: "1.4vw" }}>
+        Add or update your new Citation or Research information if any to the
+        form below
+      </p>
+      <div style={{ paddingTop: "1vw", backgroundColor: "#fbfcf8" , marginBottom : "20px"}}>
         <Box style={{ marginTop: "2vw", marginLeft: "40vw", width: "20vw" }}>
           <Stepper activeStep={activeStep} alternativeLabel>
             <Step key={1}>
@@ -53,8 +59,10 @@ const MainForm = () => {
         <div style={{ marginLeft: "5vw" }}>
           {(activeStep === 0 && (
             <div>
-              <div style={{marginBottom:'1vw'}}><b>Name</b></div>
-              <div style={{marginBottom:'1.5vw'}}>
+              <div style={{ marginBottom: "1vw" }}>
+                <b>Name</b>
+              </div>
+              <div style={{ marginBottom: "1.5vw" }}>
                 <TextField
                   id="name-input"
                   name="name"
@@ -75,10 +83,13 @@ const MainForm = () => {
                   // onChange={handleInputChange}
                 />
               </div>
-              <div style={{marginBottom:'1vw'}}>
-                <div><b style={{ marginRight: "16.2vw" }}>Email Address</b><b>Contact Number</b></div>
+              <div style={{ marginBottom: "1vw" }}>
+                <div>
+                  <b style={{ marginRight: "16.2vw" }}>Email Address</b>
+                  <b>Contact Number</b>
+                </div>
               </div>
-              <div style={{marginBottom:'1.5vw'}}>
+              <div style={{ marginBottom: "1.5vw" }}>
                 <TextField
                   id="name-input"
                   name="name"
@@ -99,35 +110,33 @@ const MainForm = () => {
                   // onChange={handleInputChange}
                 />
               </div>
-              <div><b>Type of information to be added</b></div>
               <div>
-              <FormControlLabel
-                key="male"
-                value="male"
-                control={<Radio size="small" />}
-                label="Research Paper"
-              />
+                <b>Type of information to be added</b>
               </div>
               <div>
-              <FormControlLabel
-                key="male"
-                value="male"
-                control={<Radio size="small" />}
-                label="Citation"
-              />
+                <FormControlLabel
+                  key="male"
+                  value="male"
+                  control={<Radio size="small" />}
+                  label="Research Paper"
+                />
               </div>
               <div>
-              <FormControlLabel
-                key="male"
-                value="male"
-                control={<Radio size="small" />}
-                label="Patent"
-              />
+                <FormControlLabel
+                  key="male"
+                  value="male"
+                  control={<Radio size="small" />}
+                  label="Citation"
+                />
               </div>
-
-              
-              
-
+              <div>
+                <FormControlLabel
+                  key="male"
+                  value="male"
+                  control={<Radio size="small" />}
+                  label="Patent"
+                />
+              </div>
             </div>
           )) ||
             (activeStep === 1 && <h1>Hi step 2</h1>) ||
@@ -147,6 +156,7 @@ const MainForm = () => {
           </Button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

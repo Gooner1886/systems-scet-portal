@@ -19,10 +19,10 @@ const Research = () => {
             borderRadius: "10px",
             marginLeft: "45vw",
             marginBottom: "10px",
-            fontFamily: "Poppins"
+            fontFamily: "Poppins",
           }}
         >
-          <Link to="/form" style={{ textDecoration: "none",color:'white' }}>
+          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
             Add Project
           </Link>
         </Button>
