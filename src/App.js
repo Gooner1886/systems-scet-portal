@@ -11,9 +11,23 @@ import ResearchInno from "./components/views/Research Inovation/ResearchInno";
 import About from "./components/views/About/About";
 import MainForm from "./components/views/Form/MainForm";
 import Clubs from "./components/views/Club/Clubs";
+import { useEffect } from "react";
+import axios from "axios";
 
 const App = () => {
   const [logged, setlogged] = useState(false); //for checking if user is logged in
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/api/v1/functionality/getAllCitations")
+      .then((res) => {
+        const data = res.data;
+        console.log("This is the data received", data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const cards = [
     {
@@ -70,7 +84,10 @@ const App = () => {
             path="/student-section"
             element={<StudentSection cards={cards} />}
           />
-          <Route path="/student-section/:clubNo" element={<Clubs clubDetails={cards} />} />
+          <Route
+            path="/student-section/:clubNo"
+            element={<Clubs clubDetails={cards} />}
+          />
           <Route exact path="/research-innovation" element={<ResearchInno />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/form" element={<MainForm />} />

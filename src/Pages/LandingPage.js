@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/views/Footer";
 import Navbar from "../components/views/Navbar/Navbar";
 import CarouselBar from "../components/views/CarouselBar";
@@ -10,14 +10,15 @@ import BarChart from "../components/views/Chart/BarChart";
 import LineChart from "../components/views/Chart/LineChart";
 import AwardsLanding from "../components/views/Card/AwardsLanding";
 import ResearchLanding from "../components/views/Card/ResearchLanding";
+import axios from "axios";
 
 const LandingPage = () => {
-  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435]
-  const [data,setData] = useState(chartData)
+  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
+  const [data, setData] = useState(chartData);
 
-  const [jc,setJc] = useState([234,45,67,987,345,456])
-  const [bc,setBc] = useState([234,45,67,987,345,456])
-  const [cc,setCc] = useState([234,45,67,987,345,456])
+  const [jc, setJc] = useState([234, 45, 67, 987, 345, 456]);
+  const [bc, setBc] = useState([234, 45, 67, 987, 345, 456]);
+  const [cc, setCc] = useState([234, 45, 67, 987, 345, 456]);
   return (
     <>
       <Navbar />
@@ -32,19 +33,27 @@ const LandingPage = () => {
               className="img"
             />
           </div>
-          <div style={{
-            paddingTop: "4rem",
-          }}>
-            <h1 className="head" style={{
-              fontSize: "2rem",
-              fontWeight: "bold",
-              paddingLeft: "1rem",
-            }}>
+          <div
+            style={{
+              paddingTop: "4rem",
+            }}
+          >
+            <h1
+              className="head"
+              style={{
+                fontSize: "2rem",
+                fontWeight: "bold",
+                paddingLeft: "1rem",
+              }}
+            >
               School of Computer Engineering and Technology
             </h1>
-            <div className="para" style={{
-              width: "50rem",
-            }}>
+            <div
+              className="para"
+              style={{
+                width: "50rem",
+              }}
+            >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 odio arcu, sollicitudin at risus semper, consequat ultrices
@@ -57,7 +66,7 @@ const LandingPage = () => {
                 efficitur nulla ipsum, ac mattis leo sagittis id. Aliquam erat
                 volutpat. Quisque vitae tempor quam. Proin a ligula vel purus
                 pharetra commodo quis eget leo. Nullam placerat vitae erat quis
-                viverra. 
+                viverra.
               </p>
             </div>
           </div>
@@ -74,16 +83,20 @@ const LandingPage = () => {
           </div>
           <div>
             <div className="para">
-            <h1 className="head" style={{
-              marginLeft: '1.5rem',
-            }}>
-              Dr. Vrushali Kulkarni Head of School and Professor
-            </h1>
-              <p style={{
-              width: "50rem",
-              paddingRight: "30px",
-
-            }}>
+              <h1
+                className="head"
+                style={{
+                  marginLeft: "1.5rem",
+                }}
+              >
+                Dr. Vrushali Kulkarni Head of School and Professor
+              </h1>
+              <p
+                style={{
+                  width: "50rem",
+                  paddingRight: "30px",
+                }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 odio arcu, sollicitudin at risus semper, consequat ultrices
                 felis. Morbi tellus turpis, euismod quis maximus vehicula,
@@ -104,57 +117,53 @@ const LandingPage = () => {
 
         <div className="awards">
           <div className="one">
-            <div style={{padding:'5rem 0rem'}}>
+            <div style={{ padding: "5rem 0rem" }}>
               <AwardsLanding />
             </div>
             <div>
-             <AwardsLanding/>
+              <AwardsLanding />
             </div>
           </div>
 
           <div className="three">
-            <div style={{padding:'5rem 0rem'}}>
-             <AwardsLanding/>
+            <div style={{ padding: "5rem 0rem" }}>
+              <AwardsLanding />
             </div>
             <div>
-             <AwardsLanding/>
+              <AwardsLanding />
             </div>
           </div>
         </div>
 
         <h1 className="header1">Research & Publication</h1>
         <div className="lcard">
-          <div style={{paddingTop:'2rem'}}>
+          <div style={{ paddingTop: "2rem" }}>
             <ResearchLanding />
           </div>
-          <div style={{paddingTop:'2rem'}}>
-             <ResearchLanding />
+          <div style={{ paddingTop: "2rem" }}>
+            <ResearchLanding />
           </div>
-          <div style={{paddingTop:'2rem'}}>
-              <ResearchLanding />
+          <div style={{ paddingTop: "2rem" }}>
+            <ResearchLanding />
           </div>
         </div>
-        
-        <BarChart data={data} heading='Total Citations by type' subHeading='Citaions since 2017' bottomHeader='Citations'/>
+
+        <BarChart
+          data={data}
+          heading="Total Citations by type"
+          subHeading="Citaions since 2017"
+          bottomHeader="Citations"
+        />
 
         <div className="lgraph">
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart
-              data={jc}
-              title='Journal Citations'
-             />
+            <LineChart data={jc} title="Journal Citations" />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart
-              data={bc}
-              title='Book Citations'
-             />
+            <LineChart data={bc} title="Book Citations" />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart
-              data={cc}
-              title='Conference Citations'
-             />
+            <LineChart data={cc} title="Conference Citations" />
           </div>
         </div>
       </div>
