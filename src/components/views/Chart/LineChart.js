@@ -37,6 +37,7 @@ function LineChart(props)
           style={{
             paddingTop: '2rem',
             marginTop: '2rem',
+            marginLeft: '-2rem',
           }}
           >
           </Chart>

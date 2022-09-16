@@ -10,6 +10,10 @@ import BarChart from "../components/views/Chart/BarChart";
 import LineChart from "../components/views/Chart/LineChart";
 import AwardsLanding from "../components/views/Card/AwardsLanding";
 import ResearchLanding from "../components/views/Card/ResearchLanding";
+import Achieve2 from "../Assets/Achieve2.jpg";
+import Achieve1 from "../Assets/Achieve1.jpg";
+import Achieve3 from "../Assets/Achieve3.jpg";
+import Achieve4 from "../Assets/Achieve4.jpg";
 import axios from "axios";
 
 const LandingPage = () => {
@@ -52,21 +56,11 @@ const LandingPage = () => {
               className="para"
               style={{
                 width: "50rem",
+                fontSize: "0.9rem",
               }}
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                odio arcu, sollicitudin at risus semper, consequat ultrices
-                felis. Morbi tellus turpis, euismod quis maximus vehicula,
-                lacinia ac nisl. Maecenas dignissim eros lorem, nec bibendum
-                erat faucibus et. Praesent vitae facilisis sem. Aenean elit
-                felis, varius nec auctor at, tristique ultrices neque. Morbi
-                felis dui, venenatis sit amet quam a, molestie ultrices nisi.
-                Vivamus dignissim imperdiet tempus. Suspendisse potenti. Morbi
-                efficitur nulla ipsum, ac mattis leo sagittis id. Aliquam erat
-                volutpat. Quisque vitae tempor quam. Proin a ligula vel purus
-                pharetra commodo quis eget leo. Nullam placerat vitae erat quis
-                viverra.
+              The UG Programs offered by School of Computer Engineering and Technology are 4 years full time programs. The course curriculum includes cutting-edge technologies like Artificial Intelligence, Machine Learning, Data Analytics, Cloud Computing, IoT, etc and Peace courses taught by experienced and eminent faculties. MIT-WPU consistently tops in ranking of engineering colleges and is widely recognized in India and abroad for its excellence in education. The salient features include fully equipped laboratories and Center of Excellence established by MNC like IBM, AMDOCS, NVIDIA, IEEE Pune section (Affordable Agriculture Technology Laboratory). The academic and research partners include NVIDIA, Federation University (Australia).
               </p>
             </div>
           </div>
@@ -82,33 +76,25 @@ const LandingPage = () => {
             />
           </div>
           <div>
-            <div className="para">
+            <div className="para" style={{
+              marginTop: "5rem",
+            }}>
               <h1
                 className="head"
                 style={{
                   marginLeft: "1.5rem",
                 }}
               >
-                Dr. Vrushali Kulkarni Head of School and Professor
+                Dr. Vrushali Kulkarni (Head of School and Professor)
               </h1>
               <p
                 style={{
-                  width: "50rem",
+                  width: "53rem",
                   paddingRight: "30px",
+                  fontSize: "0.9rem",
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                odio arcu, sollicitudin at risus semper, consequat ultrices
-                felis. Morbi tellus turpis, euismod quis maximus vehicula,
-                lacinia ac nisl. Maecenas dignissim eros lorem, nec bibendum
-                erat faucibus et. Praesent vitae facilisis sem. Aenean elit
-                felis, varius nec auctor at, tristique ultrices neque. Morbi
-                felis dui, venenatis sit amet quam a, molestie ultrices nisi.
-                Vivamus dignissim imperdiet tempus. Suspendisse potenti. Morbi
-                efficitur nulla ipsum, ac mattis leo sagittis id. Aliquam erat
-                volutpat. Quisque vitae tempor quam. Proin a ligula vel purus
-                pharetra commodo quis eget leo. Nullam placerat vitae erat quis
-                viverra.
+                Dr. Vrushali Kulkarni possesses Ph.D. in “Machine Learning” from College of Engineering, Pune. Prior to that, she has done ME(Computer Engg) from College of Engg, Pune, and BE(CSE) from Walchand College of Engg, Sangli. She has over 25 years of teaching experience. She has a specialization in teaching Data Structures, Algorithms, Compilers, Data Mining, and Business Intelligence. She has been in administration for the last 10 years, the Department has achieved NBA twice during her tenure. At the research front, she has received research funding from BCUD, RCFC, MIT, Pune. Recently she has received funding from IBM for a project based on the theme of “Humanoid Robots”.She has received an “Ideal Teacher” award from MIT, Pune, “Best Faculty” award from Cognizant and “Star Achiever” award from Accenture.
               </p>
             </div>
           </div>
@@ -118,19 +104,19 @@ const LandingPage = () => {
         <div className="awards">
           <div className="one">
             <div style={{ padding: "5rem 0rem" }}>
-              <AwardsLanding />
+              <AwardsLanding image = {Achieve1} desc = "The three students of our Engineering department have been selected by Amazon with a CTC of 44.14 Lakh* + 2.5 Lakh worth of employee benefits." />
             </div>
             <div>
-              <AwardsLanding />
+              <AwardsLanding image = {Achieve2} desc = "MIT-WPU School of Computer Engineering and Technology is glad to announce that our students are placed in BMC Software with the CTC of 12.5 LPA. Congratulations to the students !" />
             </div>
           </div>
 
           <div className="three">
             <div style={{ padding: "5rem 0rem" }}>
-              <AwardsLanding />
+              <AwardsLanding image = {Achieve3} desc = "Mr. Tanmay Unhale, Final Year BTech (CSE) student on receiving Best Paper award for his paper titled, Novel Approach For Feature Selection Using Genetic Algorithm,under the guidance of Prof. Shilpa Sonawani." />
             </div>
             <div>
-              <AwardsLanding />
+              <AwardsLanding image = {Achieve4} />
             </div>
           </div>
         </div>
@@ -163,7 +149,7 @@ const LandingPage = () => {
             <LineChart data={bc} title="Book Citations" />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart data={cc} title="Conference Citations" />
+            <LineChart data={cc} title="Conf. Citations" />
           </div>
         </div>
       </div>
