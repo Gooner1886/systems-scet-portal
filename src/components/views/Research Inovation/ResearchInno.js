@@ -107,7 +107,8 @@ export default function ResearchInno() {
         <h1
           style={{
             textAlign: "center",
-            fontFamily: "Poppins"
+            fontFamily: "Poppins",
+            fontSize: "1.5rem",
           }}
         >
           Research & Innovation
@@ -123,19 +124,19 @@ export default function ResearchInno() {
         }}
       >
         <TabsList>
-          <Tab
+          {/* <Tab
             style={{
               border: "1px solid black",
             }}
           >
             Research
-          </Tab>
+          </Tab> */}
           <Tab
             style={{
               border: "1px solid black",
             }}
           >
-            Publication
+            Research & Publication
           </Tab>
           <Tab
             style={{
@@ -152,16 +153,16 @@ export default function ResearchInno() {
             Patents
           </Tab>
         </TabsList>
-        <TabPanel value={0}>
+        {/* <TabPanel value={0}>
             <Research />
-        </TabPanel>
-        <TabPanel value={1}>
+        </TabPanel> */}
+        <TabPanel value={0}>
           <Publication />
         </TabPanel>
-        <TabPanel value={2}>
+        <TabPanel value={1}>
           <Grant />
         </TabPanel>
-        <TabPanel value={3}>
+        <TabPanel value={2}>
           <Patent />
         </TabPanel>
       </TabsUnstyled>

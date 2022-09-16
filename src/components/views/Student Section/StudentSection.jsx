@@ -103,7 +103,8 @@ export default function StudentSection(props) {
         <h1
           style={{
             textAlign: 'center',
-            
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '1.5rem',
           }}
         >
           Student Corner

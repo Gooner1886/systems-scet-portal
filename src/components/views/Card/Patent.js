@@ -19,6 +19,7 @@ const Patent = () => {
             borderRadius: "10px",
             marginLeft: "45vw",
             marginBottom: "10px",
+            maerginTop: "20px",
           }}
         >
           <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
@@ -28,11 +29,11 @@ const Patent = () => {
         <div
           style={{
             padding: "1vw",
-            width: "55vw",
+            width: "100%",
             height: "30vw",
-            marginTop: "2vw",
-            marginLeft: "15vw",
-            marginBottom: "15vw",
+           // marginTop: "2vw",
+            marginLeft: "10vw",
+            marginBottom: "20vw",
           }}
         >
           <BarChart

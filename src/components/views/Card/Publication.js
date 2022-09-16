@@ -34,7 +34,7 @@ const Publication = () => {
             width: "55vw",
             height: "33vw",
             marginTop: "2vw",
-            marginLeft: "15vw",
+            marginLeft: "22vw",
           }}
         >
           <GroupedBarChart data1={data1} data2={data2} />

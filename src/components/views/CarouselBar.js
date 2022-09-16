@@ -52,7 +52,7 @@ import React, {
   Component
 } from "react";
 import Slider from "react-slick";
-import Carousel1 from '../../Assets/banner1.png'
+import Carousel1 from '../../Assets/banner1.png';
 import Carousel2 from '../../Assets/Carousel2.png'
 import Carousel3 from '../../Assets/Carousel3.png'
 
@@ -90,7 +90,7 @@ export default class CarouselBar extends Component {
       alt = 'Carousel1'
       style = {
         {
-          width: '102.25rem',
+          width: "85rem",
           padding: '10px',
           border: 'none'
           //backgroundSize: 'contain',
@@ -102,24 +102,24 @@ export default class CarouselBar extends Component {
       img src = {
         Carousel2
       }
-      alt = 'Carousel1'
+      alt = 'Carousel2'
       style = {
         {
-          width: '102.25rem',
+          width: '85rem',
           border: 'none'
         }
       }
       /> 
-      </div> <
-      div > {
+      </div> 
+      <div > {
         /* <h3>3</h3> */ } <
       img src = {
         Carousel3
       }
-      alt = 'Carousel1'
+      alt = 'Carousel3'
       style = {
         {
-          width: '102.25rem',
+          width: '85rem',
           border: 'none'
         }
       }

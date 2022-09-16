@@ -31,11 +31,11 @@ const Grant = () => {
         <div
           style={{
             padding: "1vw",
-            width: "55vw",
+            width: "100%",
             height: "30vw",
             marginTop: "2vw",
-            marginLeft: "15vw",
-            marginBottom: "15vw",
+            marginLeft: "10vw",
+            marginBottom: "20vw",
           }}
         >
           <BarChart
