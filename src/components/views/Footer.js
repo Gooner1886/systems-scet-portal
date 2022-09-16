@@ -229,6 +229,9 @@ const Footer = () => {
 
             <Grid item xs={5} sm={4}>
               <Box>Find Us</Box>
+              <div className="map">
+                 <iframe width="400" height="200" allowfullscreen="" loading="lazy"  src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3783.246621064879!2d73.81269391472068!3d18.517754187410638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bc2bfb9e53a05f9%3A0x2be5e8da02be693e!2sMIT%20World%20Peace%20University%2C%20Survey%20No%2C%20124%2C%20Paud%20Rd%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411038!3m2!1d18.5177542!2d73.81488259999999!5e0!3m2!1sen!2sin!4v1663356252577!5m2!1sen!2sin"/>
+              </div>
             </Grid>
           </Grid>
         </Container>
