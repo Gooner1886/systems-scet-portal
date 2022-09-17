@@ -15,11 +15,11 @@ function LineChart(props)
         {
             title:{ text:`${props.title}`},
             xaxis:{
-                title:{text:"Citation"},
+                title:{text:"Year"},
                 categories:['2017','2018','2019','2020','2021','2022','Jul','Aug','Sep','Oct','Nov','Dec']
             },
             yaxis:{
-                title:{text:"Citation in K"}                 
+                title:{text:"Citation Count"}                 
             },
             colors:["#3d7cd4"],
 

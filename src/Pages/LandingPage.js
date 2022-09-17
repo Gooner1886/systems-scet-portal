@@ -16,13 +16,26 @@ import Achieve3 from "../Assets/Achieve3.jpg";
 import Achieve4 from "../Assets/Achieve4.jpg";
 import axios from "axios";
 
-const LandingPage = () => {
-  const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
-  const [data, setData] = useState(chartData);
+const LandingPage = (props) => {
+  // const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
+  // const [data, setData] = useState(chartData);
 
-  const [jc, setJc] = useState([234, 45, 67, 987, 345, 456]);
-  const [bc, setBc] = useState([234, 45, 67, 987, 345, 456]);
-  const [cc, setCc] = useState([234, 45, 67, 987, 345, 456]);
+  // const [jc, setJc] = useState([234, 45, 67, 987, 345, 456]);
+  // const [bc, setBc] = useState([234, 45, 67, 987, 345, 456]);
+  // const [cc, setCc] = useState([234, 45, 67, 987, 345, 456]);
+  let journalCount = [];
+  let conferenceCount = [];
+  let bookCount = [];
+
+  props.allData.forEach((el) => {
+    if (el.citationType === "Journal") {
+      journalCount.push(el.count);
+    } else if (el.citationType === "Conference") {
+      conferenceCount.push(el.count);
+    } else {
+      bookCount.push(el.count);
+    }
+  });
   return (
     <>
       <Navbar />
@@ -60,7 +73,18 @@ const LandingPage = () => {
               }}
             >
               <p>
-              The UG Programs offered by School of Computer Engineering and Technology are 4 years full time programs. The course curriculum includes cutting-edge technologies like Artificial Intelligence, Machine Learning, Data Analytics, Cloud Computing, IoT, etc and Peace courses taught by experienced and eminent faculties. MIT-WPU consistently tops in ranking of engineering colleges and is widely recognized in India and abroad for its excellence in education. The salient features include fully equipped laboratories and Center of Excellence established by MNC like IBM, AMDOCS, NVIDIA, IEEE Pune section (Affordable Agriculture Technology Laboratory). The academic and research partners include NVIDIA, Federation University (Australia).
+                The UG Programs offered by School of Computer Engineering and
+                Technology are 4 years full time programs. The course curriculum
+                includes cutting-edge technologies like Artificial Intelligence,
+                Machine Learning, Data Analytics, Cloud Computing, IoT, etc and
+                Peace courses taught by experienced and eminent faculties.
+                MIT-WPU consistently tops in ranking of engineering colleges and
+                is widely recognized in India and abroad for its excellence in
+                education. The salient features include fully equipped
+                laboratories and Center of Excellence established by MNC like
+                IBM, AMDOCS, NVIDIA, IEEE Pune section (Affordable Agriculture
+                Technology Laboratory). The academic and research partners
+                include NVIDIA, Federation University (Australia).
               </p>
             </div>
           </div>
@@ -76,9 +100,12 @@ const LandingPage = () => {
             />
           </div>
           <div>
-            <div className="para" style={{
-              marginTop: "5rem",
-            }}>
+            <div
+              className="para"
+              style={{
+                marginTop: "5rem",
+              }}
+            >
               <h1
                 className="head"
                 style={{
@@ -94,7 +121,20 @@ const LandingPage = () => {
                   fontSize: "0.9rem",
                 }}
               >
-                Dr. Vrushali Kulkarni possesses Ph.D. in “Machine Learning” from College of Engineering, Pune. Prior to that, she has done ME(Computer Engg) from College of Engg, Pune, and BE(CSE) from Walchand College of Engg, Sangli. She has over 25 years of teaching experience. She has a specialization in teaching Data Structures, Algorithms, Compilers, Data Mining, and Business Intelligence. She has been in administration for the last 10 years, the Department has achieved NBA twice during her tenure. At the research front, she has received research funding from BCUD, RCFC, MIT, Pune. Recently she has received funding from IBM for a project based on the theme of “Humanoid Robots”.She has received an “Ideal Teacher” award from MIT, Pune, “Best Faculty” award from Cognizant and “Star Achiever” award from Accenture.
+                Dr. Vrushali Kulkarni possesses Ph.D. in “Machine Learning” from
+                College of Engineering, Pune. Prior to that, she has done
+                ME(Computer Engg) from College of Engg, Pune, and BE(CSE) from
+                Walchand College of Engg, Sangli. She has over 25 years of
+                teaching experience. She has a specialization in teaching Data
+                Structures, Algorithms, Compilers, Data Mining, and Business
+                Intelligence. She has been in administration for the last 10
+                years, the Department has achieved NBA twice during her tenure.
+                At the research front, she has received research funding from
+                BCUD, RCFC, MIT, Pune. Recently she has received funding from
+                IBM for a project based on the theme of “Humanoid Robots”.She
+                has received an “Ideal Teacher” award from MIT, Pune, “Best
+                Faculty” award from Cognizant and “Star Achiever” award from
+                Accenture.
               </p>
             </div>
           </div>
@@ -104,19 +144,28 @@ const LandingPage = () => {
         <div className="awards">
           <div className="one">
             <div style={{ padding: "5rem 0rem" }}>
-              <AwardsLanding image = {Achieve1} desc = "The three students of our Engineering department have been selected by Amazon with a CTC of 44.14 Lakh* + 2.5 Lakh worth of employee benefits." />
+              <AwardsLanding
+                image={Achieve1}
+                desc="The three students of our Engineering department have been selected by Amazon with a CTC of 44.14 Lakh* + 2.5 Lakh worth of employee benefits."
+              />
             </div>
             <div>
-              <AwardsLanding image = {Achieve2} desc = "MIT-WPU School of Computer Engineering and Technology is glad to announce that our students are placed in BMC Software with the CTC of 12.5 LPA. Congratulations to the students !" />
+              <AwardsLanding
+                image={Achieve2}
+                desc="MIT-WPU School of Computer Engineering and Technology is glad to announce that our students are placed in BMC Software with the CTC of 12.5 LPA. Congratulations to the students !"
+              />
             </div>
           </div>
 
           <div className="three">
             <div style={{ padding: "5rem 0rem" }}>
-              <AwardsLanding image = {Achieve3} desc = "Mr. Tanmay Unhale, Final Year BTech (CSE) student on receiving Best Paper award for his paper titled, Novel Approach For Feature Selection Using Genetic Algorithm,under the guidance of Prof. Shilpa Sonawani." />
+              <AwardsLanding
+                image={Achieve3}
+                desc="Mr. Tanmay Unhale, Final Year BTech (CSE) student on receiving Best Paper award for his paper titled, Novel Approach For Feature Selection Using Genetic Algorithm,under the guidance of Prof. Shilpa Sonawani."
+              />
             </div>
             <div>
-              <AwardsLanding image = {Achieve4} />
+              <AwardsLanding image={Achieve4} />
             </div>
           </div>
         </div>
@@ -135,21 +184,21 @@ const LandingPage = () => {
         </div>
 
         <BarChart
-          data={data}
+          data={props.allData}
           heading="Total Citations by type"
-          subHeading="Citaions since 2017"
+          subHeading="Citations since 2017"
           bottomHeader="Citations"
         />
 
         <div className="lgraph">
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart data={jc} title="Journal Citations" />
+            <LineChart data={journalCount} title="Journal Citations" />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart data={bc} title="Book Citations" />
+            <LineChart data={bookCount} title="Book Citations" />
           </div>
           <div style={{ paddingRight: "3rem" }}>
-            <LineChart data={cc} title="Conf. Citations" />
+            <LineChart data={conferenceCount} title="Conf. Citations" />
           </div>
         </div>
       </div>

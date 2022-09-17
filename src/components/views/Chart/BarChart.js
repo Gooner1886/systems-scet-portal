@@ -2,12 +2,33 @@ import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
 function BarChart(props) {
-  // console.log(props)
+  console.log(props)
+
+  let countArray = [];
+  let count2017 = 0;  
+  let count2018 = 0;  
+  let count2019 = 0;  
+  let count2020 = 0;  
+  let count2021 = 0;  
+  props.data.forEach(el=>{
+    if(el.year === 2017) {
+      count2017 += el.count;
+    } else if(el.year === 2018) {
+      count2018 += el.count;
+    } else if(el.year === 2019) {
+      count2019 += el.count;
+    } else if(el.year === 2020) {
+      count2020 += el.count;
+    } else {
+      count2021 += el.count;
+    }
+  })
+  countArray.push(count2017, count2018, count2019, count2020, count2021);
+  console.log(countArray);
   const seriesArray = [
     {
       name:`${props.bottomHeader}`,
-      // data:[6578, 6787, 3245, 9876, 2324, 5123, 2435]
-      data:props.data
+      data:countArray
     }
   ]
   const [series, setSeries] = useState(seriesArray)
@@ -29,13 +50,11 @@ function BarChart(props) {
     xaxis: {
       tickPlacement: "on",
       categories: [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F",
-        "G",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021"
       ],
       title: {
         text: `${props.bottomHeader}`,
@@ -51,7 +70,7 @@ function BarChart(props) {
         style: { fontSize: "15", colors: ["black"] },
       },
       title: {
-        text: "User In (K)",
+        text: "Citation Count",
         style: { color: "black", fontSize: 15 },
       },
     },
