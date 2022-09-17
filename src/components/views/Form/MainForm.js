@@ -94,7 +94,7 @@ const MainForm = () => {
           </Stepper>
         </Box>
 
-        <div style={{ marginLeft: "5vw" }}>
+        <div style={{ marginLeft: "30vw" }}>
           {(activeStep === 0 && (
             <div>
               <div style={{ marginBottom: "1vw" }}>
@@ -104,6 +104,7 @@ const MainForm = () => {
                 <TextField
                   id="name-input"
                   name="name"
+                  required
                   label="First Name"
                   type="text"
                   variant="outlined"
@@ -116,6 +117,7 @@ const MainForm = () => {
                 <TextField
                   id="name-input"
                   name="name"
+                  required
                   label="Last Name"
                   type="text"
                   variant="outlined"
@@ -133,6 +135,7 @@ const MainForm = () => {
                 <TextField
                   id="name-input"
                   name="name"
+                  required
                   label="Email"
                   type="text"
                   variant="outlined"
@@ -143,6 +146,7 @@ const MainForm = () => {
                 <TextField
                   id="name-input"
                   name="name"
+                  required
                   label="Contact"
                   type="text"
                   variant="outlined"
@@ -156,6 +160,7 @@ const MainForm = () => {
               <div>
                 <FormControlLabel
                   key="male"
+                  required
                   value="male"
                   control={<Radio size="small" />}
                   label="Research Paper"
@@ -164,6 +169,7 @@ const MainForm = () => {
               <div>
                 <FormControlLabel
                   key="male"
+                  required
                   value="male"
                   control={<Radio size="small" />}
                   label="Citation"
@@ -221,10 +227,12 @@ const MainForm = () => {
                       style={{ marginRight: "10vw" }}
                     />
                   </div> */}
-                <div style={{ marginBottom: "1vw" }}>
+                <div style={{ marginBottom: "1vw" , marginTop: '2rem' }}>
                   <div>
                     <b style={{ marginRight: "16.2vw" }}>Paper Title</b>
-                    <b>Submission Type</b>
+                    <b style={{
+                      marginLeft: "2vw",
+                    }}>Submission Type</b>
                   </div>
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
@@ -318,6 +326,7 @@ const MainForm = () => {
                 </div>
                 <div style={{ marginBottom: "1vw" }}>
                   <b>Conference Name</b>
+                  
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
                   <TextField
@@ -337,27 +346,10 @@ const MainForm = () => {
                   />
                 </div>
                 <div style={{ marginBottom: "1vw" }}>
-                  <b>Book Name</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="bookName"
-                    name="name"
-                    label="Book Name"
-                    type="text"
-                    variant="outlined"
-                    value={formData.bookName}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        bookName: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
                   <b>Publisher Name</b>
+                  <b style={{
+                      marginLeft: "16vw",
+                    }}>Book Name</b>
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
                   <TextField
@@ -371,6 +363,22 @@ const MainForm = () => {
                       setFormData({
                         ...formData,
                         publisherName: e.target.value,
+                      })
+                    }
+                    style={{ marginRight: "10vw" }}
+                  />
+
+                  <TextField
+                    id="bookName"
+                    name="name"
+                    label="Book Name"
+                    type="text"
+                    variant="outlined"
+                    value={formData.bookName}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        bookName: e.target.value,
                       })
                     }
                     style={{ marginRight: "10vw" }}
