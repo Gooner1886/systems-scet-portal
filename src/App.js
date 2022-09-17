@@ -17,17 +17,17 @@ import axios from "axios";
 const App = () => {
   const [logged, setlogged] = useState(false); //for checking if user is logged in
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3001/api/v1/functionality/getAllCitations")
-      .then((res) => {
-        const data = res.data;
-        console.log("This is the data received", data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/api/v1/functionality/getAllCitations")
+  //     .then((res) => {
+  //       const data = res.data;
+  //       console.log("This is the data received", data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
 
   const cards = [
     {
