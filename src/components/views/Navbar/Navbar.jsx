@@ -11,6 +11,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import logo from "../../../Assets/logo.png";
+import logo2 from "../../../Assets/logo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ListItemButton } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
@@ -63,6 +64,7 @@ export default function Navbar() {
         className="nav__main"
         style={{
           backgroundColor: "#fff",
+          height: "75px",
         }}
       >
         <Container classes="nav__container">
@@ -75,7 +77,9 @@ export default function Navbar() {
               </Link>
             </ListItem>
             <Divider />
-            <ListItem className="nav__main-list-item">
+            <ListItem className="nav__main-list-item" style={{
+                 marginRight: "-100px",
+            }}>
               <Link
                 to="/student-section"
                 className="nav__main-list-item-link"
@@ -83,7 +87,7 @@ export default function Navbar() {
                   textDecoration: "none",
                   color: "#000",
                   fontWeight: "500",
-                  fontSize: '1.3rem',
+                  //fontSize: '1.3rem',
                 }}
               >
                 Student Corner
@@ -91,7 +95,7 @@ export default function Navbar() {
             </ListItem>
             <Divider />
 
-            <ListItem>
+            <ListItem className="nav__main-list-item">
               <Link
                 to="/research-innovation"
                 className="nav__main-list-item-link"
@@ -99,7 +103,7 @@ export default function Navbar() {
                   textDecoration: "none",
                   color: "#000",
                   fontWeight: "500",
-                  fontSize: '1.3rem',
+                  //fontSize: '1.3rem',
                 }}
               >
                 Research & Innovation

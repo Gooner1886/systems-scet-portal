@@ -40,7 +40,7 @@ const LandingPage = (props) => {
     <>
       <Navbar />
       <CarouselBar />
-      <div style={{ paddingLeft: "5%" }}>
+      <div style={{ paddingLeft: "4%", marginTop: "-3%" }}>
         <div className="content">
           <div>
             <img
@@ -52,14 +52,14 @@ const LandingPage = (props) => {
           </div>
           <div
             style={{
-              paddingTop: "4rem",
+              paddingTop: "2rem",
             }}
           >
             <h1
               className="head"
               style={{
-                fontSize: "2rem",
-                fontWeight: "bold",
+                fontSize: "2.4rem",
+                fontWeight: "800",
                 paddingLeft: "1rem",
               }}
             >
@@ -68,7 +68,7 @@ const LandingPage = (props) => {
             <div
               className="para"
               style={{
-                width: "50rem",
+                width: "60rem",
                 fontSize: "0.9rem",
               }}
             >
@@ -89,7 +89,10 @@ const LandingPage = (props) => {
             </div>
           </div>
         </div>
-        <h1 className="header">Meet the Dean HoS</h1>
+        <h1 className="header" style={{
+          marginTop: "-1.5rem",
+          
+        }}>Meet the Dean HoS</h1>
         <div className="content">
           <div>
             <img
@@ -109,32 +112,19 @@ const LandingPage = (props) => {
               <h1
                 className="head"
                 style={{
-                  marginLeft: "1.5rem",
+                  marginLeft: "0.5rem",
                 }}
               >
                 Dr. Vrushali Kulkarni (Head of School and Professor)
               </h1>
               <p
                 style={{
-                  width: "53rem",
+                  width: "52rem",
                   paddingRight: "30px",
-                  fontSize: "0.9rem",
+                  fontSize: "1rem",
                 }}
               >
-                Dr. Vrushali Kulkarni possesses Ph.D. in “Machine Learning” from
-                College of Engineering, Pune. Prior to that, she has done
-                ME(Computer Engg) from College of Engg, Pune, and BE(CSE) from
-                Walchand College of Engg, Sangli. She has over 25 years of
-                teaching experience. She has a specialization in teaching Data
-                Structures, Algorithms, Compilers, Data Mining, and Business
-                Intelligence. She has been in administration for the last 10
-                years, the Department has achieved NBA twice during her tenure.
-                At the research front, she has received research funding from
-                BCUD, RCFC, MIT, Pune. Recently she has received funding from
-                IBM for a project based on the theme of “Humanoid Robots”.She
-                has received an “Ideal Teacher” award from MIT, Pune, “Best
-                Faculty” award from Cognizant and “Star Achiever” award from
-                Accenture.
+                Dr. Vrushali Kulkarni possesses Ph.D. in “Machine Learning” from College of Engineering, Pune. Prior to that, she has done ME(Computer Engg) from College of Engg, Pune, and BE(CSE) from Walchand College of Engg, Sangli. She has over 25 years of teaching experience. She has a specialization in teaching Data Structures, Algorithms, Compilers, Data Mining, and Business Intelligence. She has been in administration for the last 10 years, the Department has achieved NBA twice during her tenure.
               </p>
             </div>
           </div>
