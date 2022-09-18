@@ -29,7 +29,7 @@ const Patent = () => {
         <div
           style={{
             padding: "1vw",
-            width: "100%",
+           // width: "100%",
             height: "30vw",
            // marginTop: "2vw",
             marginLeft: "10vw",

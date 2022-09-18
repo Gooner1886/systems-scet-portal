@@ -5,14 +5,16 @@
 }
 
 .nav__main-list{
-    display: flex;
-    flex: 1;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: row;
+     display: flex;
+     flex: 1;
+     flex-grow: 1;
+     align-items: center;
+     justify-content: flex-end;
+    // list-style: none;
+    // margin: 0;
+     flex-direction: row;
+    //float: right;
     color: black;
-
 
 
    .nav__main-list-item{
@@ -24,6 +26,10 @@
 
         color: black;
      }
+     
+     .nav__main-list-item-link{
+        font-size: 1.2rem;
+    }
         
 }
    
@@ -37,12 +43,16 @@
 
 .nav__container-image{
     display: flex;
-    flex: 1;
-    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    //flex: 1;
+    //z-index: 1;
 
     img{
         width: 30%;
         height: 30%;
+        padding: 10px;
+        margin-top: 4px;
 
         @media screen and (max-width: 768px){
             width: 40%;
