@@ -58,9 +58,10 @@ const MainForm = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log(formData);
-  }
+  };
 
   return (
     <div>
@@ -88,151 +89,46 @@ const MainForm = () => {
             <Step key={2}>
               <StepLabel></StepLabel>
             </Step>
-            <Step key={3}>
+            {/* <Step key={3}>
               <StepLabel></StepLabel>
-            </Step>
+            </Step> */}
           </Stepper>
         </Box>
-
-        <div style={{ marginLeft: "30vw" }}>
-          {(activeStep === 0 && (
-            <div>
-              <div style={{ marginBottom: "1vw" }}>
-                <b>Name</b>
-              </div>
-              <div style={{ marginBottom: "1.5vw" }}>
-                <TextField
-                  id="name-input"
-                  name="name"
-                  required
-                  label="First Name"
-                  type="text"
-                  variant="outlined"
-                  value={formData.facultyName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, facultyName: e.target.value })
-                  }
-                  style={{ marginRight: "10vw" }}
-                />
-                <TextField
-                  id="name-input"
-                  name="name"
-                  required
-                  label="Last Name"
-                  type="text"
-                  variant="outlined"
-                  // value={formValues.name}
-                  // onChange={handleInputChange}
-                />
-              </div>
-              <div style={{ marginBottom: "1vw" }}>
-                <div>
-                  <b style={{ marginRight: "16.2vw" }}>Email Address</b>
-                  <b>Contact Number</b>
-                </div>
-              </div>
-              <div style={{ marginBottom: "1.5vw" }}>
-                <TextField
-                  id="name-input"
-                  name="name"
-                  required
-                  label="Email"
-                  type="text"
-                  variant="outlined"
-                  // value={formValues.name}
-                  // onChange={handleInputChange}
-                  style={{ marginRight: "10vw" }}
-                />
-                <TextField
-                  id="name-input"
-                  name="name"
-                  required
-                  label="Contact"
-                  type="text"
-                  variant="outlined"
-                  // value={formValues.name}
-                  // onChange={handleInputChange}
-                />
-              </div>
+        <form onSubmit={handleSubmit}>
+          <div style={{ marginLeft: "30vw" }}>
+            {(activeStep === 0 && (
               <div>
-                <b>Type of information to be added</b>
-              </div>
-              <div>
-                <FormControlLabel
-                  key="male"
-                  required
-                  value="male"
-                  control={<Radio size="small" />}
-                  label="Research Paper"
-                />
-              </div>
-              <div>
-                <FormControlLabel
-                  key="male"
-                  required
-                  value="male"
-                  control={<Radio size="small" />}
-                  label="Citation"
-                />
-              </div>
-              <div>
-                <FormControlLabel
-                  key="male"
-                  value="male"
-                  control={<Radio size="small" />}
-                  label="Patent"
-                />
-              </div>
-            </div>
-          )) ||
-            (activeStep === 1 && (
-              <div>
-                {/* <div style={{ marginBottom: "1vw" }}>
-                    <b>Paper Title</b>
-                  </div>
-                  <div style={{ marginBottom: "1.5vw" }}>
-                    <TextField
-                      id="paperTitle"
-                      name="name"
-                      label="Paper Title"
-                      type="text"
-                      variant="outlined"
-                      value={formData.paperTitle}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          paperTitle: e.target.value,
-                        })
-                      }
-                      style={{ marginRight: "10vw" }}
-                    />
-                  </div>
+                <div style={{ marginBottom: "1vw", marginTop: "2rem" }}>
                   <div style={{ marginBottom: "1vw" }}>
-                    <b>Submission Type</b>
+                    <b>Name</b>
                   </div>
                   <div style={{ marginBottom: "1.5vw" }}>
                     <TextField
-                      id="submissionType"
+                      id="name-input"
                       name="name"
-                      label="Submission Type"
+                      required
+                      label="Name"
                       type="text"
                       variant="outlined"
-                      value={formData.submissionType}
+                      value={formData.facultyName}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          submissionType: e.target.value,
+                          facultyName: e.target.value,
                         })
                       }
                       style={{ marginRight: "10vw" }}
                     />
-                  </div> */}
-                <div style={{ marginBottom: "1vw" , marginTop: '2rem' }}>
+                  </div>
                   <div>
                     <b style={{ marginRight: "16.2vw" }}>Paper Title</b>
-                    <b style={{
-                      marginLeft: "2vw",
-                    }}>Submission Type</b>
+                    <b
+                      style={{
+                        marginLeft: "2vw",
+                      }}
+                    >
+                      Submission Type
+                    </b>
                   </div>
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
@@ -326,7 +222,6 @@ const MainForm = () => {
                 </div>
                 <div style={{ marginBottom: "1vw" }}>
                   <b>Conference Name</b>
-                  
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
                   <TextField
@@ -347,9 +242,13 @@ const MainForm = () => {
                 </div>
                 <div style={{ marginBottom: "1vw" }}>
                   <b>Publisher Name</b>
-                  <b style={{
+                  <b
+                    style={{
                       marginLeft: "16vw",
-                    }}>Book Name</b>
+                    }}
+                  >
+                    Book Name
+                  </b>
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
                   <TextField
@@ -384,46 +283,6 @@ const MainForm = () => {
                     style={{ marginRight: "10vw" }}
                   />
                 </div>
-                {/* <div style={{ marginBottom: "1vw" }}>
-                    <b>Author Name</b>
-                  </div>
-                  <div style={{ marginBottom: "1.5vw" }}>
-                    <TextField
-                      id="authorName"
-                      name="name"
-                      label="Author Name"
-                      type="text"
-                      variant="outlined"
-                      value={formData.authorName}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          authorName: e.target.value,
-                        })
-                      }
-                      style={{ marginRight: "10vw" }}
-                    />
-                  </div>    
-                  <div style={{ marginBottom: "1vw" }}>
-                    <b>Co-Author Name</b>
-                  </div>
-                  <div style={{ marginBottom: "1.5vw" }}>
-                    <TextField
-                      id="coauthorName"
-                      name="name"
-                      label="Co-Author Name"
-                      type="text"
-                      variant="outlined"
-                      value={formData.coauthorName}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          coauthorName: e.target.value,
-                        })
-                      }
-                      style={{ marginRight: "10vw" }}
-                    />
-                  </div>                    */}
                 <div style={{ marginBottom: "1vw" }}>
                   <div>
                     <b style={{ marginRight: "16.2vw" }}>Author Name</b>
@@ -467,6 +326,7 @@ const MainForm = () => {
                 </div>
                 <div style={{ marginBottom: "1.5vw" }}>
                   <TextareaAutosize
+                    required
                     id="affiliations"
                     name="name"
                     label="Publisher Name"
@@ -484,165 +344,172 @@ const MainForm = () => {
                 </div>
               </div>
             )) ||
-            (activeStep === 2 && (
-              <div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <div>
-                    <b style={{ marginRight: "16.2vw" }}>ISSN Number</b>
-                    <b>ISBN Number</b>
+              (activeStep === 1 && (
+                <div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <div>
+                      <b style={{ marginRight: "16.2vw" }}>ISSN Number</b>
+                      <b>ISBN Number</b>
+                    </div>
                   </div>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="issn"
-                    name="name"
-                    label="ISSN"
-                    type="number"
-                    variant="outlined"
-                    value={formData.ISSN}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        ISSN: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                  <TextField
-                    id="publisherName"
-                    name="name"
-                    label="ISBN"
-                    type="number"
-                    variant="outlined"
-                    value={formData.ISBN}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        ISBN: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>DOI</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="DOI"
-                    name="name"
-                    label="DOI"
-                    type="text"
-                    variant="outlined"
-                    value={formData.DOI}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        DOI: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>Status</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Status"
-                    type="text"
-                    variant="outlined"
-                    value={formData.status}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        status: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>Pages</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="pages"
-                    name="name"
-                    label="Number of Pages"
-                    type="number"
-                    variant="outlined"
-                    value={formData.pages}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        pages: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <div>
-                    <b style={{ marginRight: "16.2vw" }}>Month</b>
-                    <b>Year</b>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="issn"
+                      name="name"
+                      label="ISSN"
+                      type="number"
+                      variant="outlined"
+                      value={formData.ISSN}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          ISSN: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                    <TextField
+                      required
+                      id="publisherName"
+                      name="name"
+                      label="ISBN"
+                      type="number"
+                      variant="outlined"
+                      value={formData.ISBN}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          ISBN: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
                   </div>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="month"
-                    name="name"
-                    label="Month"
-                    type="number"
-                    variant="outlined"
-                    value={formData.month}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        month: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                  <TextField
-                    id="year"
-                    name="name"
-                    label="Year"
-                    type="number"
-                    variant="outlined"
-                    value={formData.year}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        year: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>Journal Location</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Journal Location"
-                    type="text"
-                    variant="outlined"
-                    value={formData.journalLoc}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        journalLoc: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                {/* <div style={{ marginBottom: "1vw" }}>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>DOI</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="DOI"
+                      name="name"
+                      label="DOI"
+                      type="text"
+                      variant="outlined"
+                      value={formData.DOI}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          DOI: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>Status</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="status"
+                      name="name"
+                      label="Status"
+                      type="text"
+                      variant="outlined"
+                      value={formData.status}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          status: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>Pages</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="pages"
+                      name="name"
+                      label="Number of Pages"
+                      type="number"
+                      variant="outlined"
+                      value={formData.pages}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          pages: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <div>
+                      <b style={{ marginRight: "16.2vw" }}>Month</b>
+                      <b>Year</b>
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="month"
+                      name="name"
+                      label="Month"
+                      type="number"
+                      variant="outlined"
+                      value={formData.month}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          month: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                    <TextField
+                      required
+                      id="year"
+                      name="name"
+                      label="Year"
+                      type="number"
+                      variant="outlined"
+                      value={formData.year}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          year: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>Journal Location</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      id="status"
+                      name="name"
+                      label="Journal Location"
+                      type="text"
+                      variant="outlined"
+                      value={formData.journalLoc}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          journalLoc: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  {/* <div style={{ marginBottom: "1vw" }}>
                     <b>Link</b>
                   </div>
                   <div style={{ marginBottom: "1.5vw" }}>
@@ -682,104 +549,110 @@ const MainForm = () => {
                       style={{ marginRight: "10vw" }}
                     />
                   </div> */}
-                <div style={{ marginBottom: "1vw" }}>
-                  <div>
-                    <b style={{ marginRight: "16.2vw" }}>Link</b>
-                    <b>Proof Link</b>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <div>
+                      <b style={{ marginRight: "16.2vw" }}>Link</b>
+                      <b>Proof Link</b>
+                    </div>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="status"
+                      name="name"
+                      label="Link"
+                      type="text"
+                      variant="outlined"
+                      value={formData.link}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          link: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                    <TextField
+                      required
+                      id="status"
+                      name="name"
+                      label="Proof Link"
+                      type="text"
+                      variant="outlined"
+                      value={formData.proofLink}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          proofLink: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>Citation Format</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      id="status"
+                      name="name"
+                      label="Citation Format"
+                      type="text"
+                      variant="outlined"
+                      value={formData.citationFormat}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          citationFormat: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
+                  </div>
+                  <div style={{ marginBottom: "1vw" }}>
+                    <b>Domain</b>
+                  </div>
+                  <div style={{ marginBottom: "1.5vw" }}>
+                    <TextField
+                      required
+                      id="status"
+                      name="name"
+                      label="Domain"
+                      type="text"
+                      variant="outlined"
+                      value={formData.domain}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          domain: e.target.value,
+                        })
+                      }
+                      style={{ marginRight: "10vw" }}
+                    />
                   </div>
                 </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Link"
-                    type="text"
-                    variant="outlined"
-                    value={formData.link}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        link: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Proof Link"
-                    type="text"
-                    variant="outlined"
-                    value={formData.proofLink}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        proofLink: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>Citation Format</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Citation Format"
-                    type="text"
-                    variant="outlined"
-                    value={formData.citationFormat}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        citationFormat: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-                <div style={{ marginBottom: "1vw" }}>
-                  <b>Domain</b>
-                </div>
-                <div style={{ marginBottom: "1.5vw" }}>
-                  <TextField
-                    id="status"
-                    name="name"
-                    label="Domain"
-                    type="text"
-                    variant="outlined"
-                    value={formData.domain}
-                    onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        domain: e.target.value,
-                      })
-                    }
-                    style={{ marginRight: "10vw" }}
-                  />
-                </div>
-              </div>
-            ))}
-        </div>
-        <div style={{ marginLeft: "46.5vw" }}>
-          <Button
-            color="inherit"
-            disabled={activeStep === 0}
-            onClick={handleBack}
-            sx={{ mr: 1 }}
-          >
-            <NavigateBeforeIcon />
-          </Button>
-          {activeStep === 2 ? (
-            <Button onClick={handleSubmit}>Submit</Button>
-          ) : (
-            <Button onClick={handleNext}>
-              <NavigateNextIcon />
+              ))}
+          </div>
+          <div style={{ marginLeft: "46.5vw" }}>
+            <Button
+              color="inherit"
+              disabled={activeStep === 0}
+              onClick={handleBack}
+              sx={{ mr: 1 }}
+            >
+              <NavigateBeforeIcon />
             </Button>
-          )}
-        </div>
+            {activeStep === 1 ? (
+              <Button type="submit" variant="contained">
+                Submit
+              </Button>
+            ) : (
+              <Button onClick={handleNext}>
+                <NavigateNextIcon />
+              </Button>
+            )}
+          </div>
+        </form>
       </div>
 
       <Footer />
