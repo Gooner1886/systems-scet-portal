@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BarChart from "../Chart/BarChart";
+import BarChart2 from "../Chart/BarChart2";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 const Patent = () => {
@@ -31,12 +31,12 @@ const Patent = () => {
             padding: "1vw",
            // width: "100%",
             height: "30vw",
-           // marginTop: "2vw",
+            // marginTop: "2vw",
             marginLeft: "10vw",
             marginBottom: "20vw",
           }}
         >
-          <BarChart
+          <BarChart2
             data={data}
             heading="Total Patents"
             subHeading="Patents since 2017"

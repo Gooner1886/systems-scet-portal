@@ -15,19 +15,40 @@ import { useEffect } from "react";
 import axios from "axios";
 
 const App = () => {
+  const [allData, setAllData] = useState([]);
   const [logged, setlogged] = useState(false); //for checking if user is logged in
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3001/api/v1/functionality/getAllCitations")
-  //     .then((res) => {
-  //       const data = res.data;
-  //       console.log("This is the data received", data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/api/v1/functionality/getAllCitations")
+      .then((res) => {
+        const dataArray = res.data;
+        console.log("This is the data received", dataArray);
+        setAllData(dataArray);
+        // let jc = 0;
+        // let cc = 0;
+        // let bc = 0;
+        // dataArray.forEach((element) => {
+        //   // console.log("Currently on: ", element.citationType);
+        //   if (element.citationType === "Journal") {
+        //     jc += element.count;
+        //   } else if (element.citationType === "Conference") {
+        //     cc += element.count;
+        //   } else {
+        //     bc += element.count;
+        //   }
+        // });
+        // console.log("Total Journal Citations are : ", jc);
+        // console.log("Total Conference Citations are : ", cc);
+        // console.log("Total Book Citations are : ", bc);
+        // setJournalCount(jc);
+        // setConferenceCount(cc);
+        // setBookCount(cc);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   const cards = [
     {
@@ -76,7 +97,18 @@ const App = () => {
     <div className="font">
       <Logged.Provider value={{ value: logged, setter: setlogged }}>
         <Routes>
-          <Route exact path="/" element={<LandingPage />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <LandingPage
+                allData={allData}
+                // journalCount={journalCount}
+                // conferenceCount={conferenceCount}
+                // bookCount={bookCount}
+              />
+            }
+          />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/reset" element={<ResetPassword />} />
           <Route

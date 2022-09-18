@@ -1,34 +1,13 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
-function BarChart(props) {
+function BarChart2(props) {
   console.log(props)
 
-  let countArray = [];
-  let count2017 = 0;  
-  let count2018 = 0;  
-  let count2019 = 0;  
-  let count2020 = 0;  
-  let count2021 = 0;  
-  props.data.forEach(el=>{
-    if(el.year === 2017) {
-      count2017 += el.count;
-    } else if(el.year === 2018) {
-      count2018 += el.count;
-    } else if(el.year === 2019) {
-      count2019 += el.count;
-    } else if(el.year === 2020) {
-      count2020 += el.count;
-    } else {
-      count2021 += el.count;
-    }
-  })
-  countArray.push(count2017, count2018, count2019, count2020, count2021);
-  console.log(countArray);
   const seriesArray = [
     {
       name:`${props.bottomHeader}`,
-      data:countArray
+      data:props.data
     }
   ]
   const [series, setSeries] = useState(seriesArray)
@@ -123,4 +102,4 @@ function BarChart(props) {
   );
 }
 
-export default BarChart;
+export default BarChart2;
