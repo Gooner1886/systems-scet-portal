@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BarChart from "../Chart/BarChart";
+import BarChart2 from "../Chart/BarChart2";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
@@ -38,7 +39,7 @@ const Grant = () => {
             marginBottom: "20vw",
           }}
         >
-          <BarChart
+          <BarChart2
             data={data}
             heading="Grants and other revenue generation"
             subHeading="Grants since 2017"
