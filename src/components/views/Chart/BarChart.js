@@ -31,9 +31,9 @@ function BarChart(props) {
       data:countArray
     }
   ]
-  const [series, setSeries] = useState(seriesArray)
+  const [series] = useState(seriesArray)
 
-  const [option, setOption] = useState({
+  const [option] = useState({
     title: {
       text: `${props.heading}`,
       style: { fontSize: 25, marginBottom: "1rem" },
@@ -99,9 +99,8 @@ function BarChart(props) {
         <Chart
          style={{
           paddingTop: '2rem',
-          width: '70rem',
+          width: '80%',
           height: '20rem',
-          marginLeft: '5rem',
         }}
           type="bar"
           // width={1100}

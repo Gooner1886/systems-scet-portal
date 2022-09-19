@@ -3,8 +3,8 @@
 }
 
 .logo{
-    height: "16rem";
-    width: "20rem"
+    height: 16rem;
+    width: 20rem;
 }
 p{
     text-align: center;
@@ -13,22 +13,20 @@ h1 .head{
     text-align: center;
 }
 .img{
-    padding-top: 5rem;
+    padding-top: 0;
 }
 .content{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: -4.5%;
-    padding-right: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
     margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 .awards{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    margin-left: 5rem;
     margin-top: -3.5rem;
     align-items: center;
     
@@ -37,7 +35,7 @@ h1 .head{
     text-align: center;
 }
 .three{
-    padding-left: 5rem;
+    padding-left: 8rem;
 }
 .lgraph{
     display :grid;
@@ -46,10 +44,8 @@ h1 .head{
 }
 .lcard{
     display :grid;
-    margin-top: -2rem;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 7rem;
-    margin-left: 1rem;
 }
 
 .header{

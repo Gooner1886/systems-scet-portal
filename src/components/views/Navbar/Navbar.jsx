@@ -8,10 +8,9 @@ import {
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import logo from "../../../Assets/logo.png";
-import logo2 from "../../../Assets/logo2.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { ListItemButton } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
@@ -46,7 +45,7 @@ export default function Navbar() {
     >
       <List>
         {["Research & Innovation", "Student Corner", "Login"].map(
-          (text, index) => (
+          (text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemText primary={text} />
@@ -67,7 +66,7 @@ export default function Navbar() {
           height: "75px",
         }}
       >
-        <Container classes="nav__container">
+        <Container classes="nav__container" >
           <List className="nav__main-list">
             <ListItem className="logo">
               <Link to='/'>
@@ -77,9 +76,7 @@ export default function Navbar() {
               </Link>
             </ListItem>
             <Divider />
-            <ListItem className="nav__main-list-item" style={{
-                 marginRight: "-100px",
-            }}>
+            <ListItem className="nav__main-list-item" style={{ marginLeft: '275px', width: '70%' }}>
               <Link
                 to="/student-section"
                 className="nav__main-list-item-link"
