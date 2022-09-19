@@ -192,7 +192,7 @@ const Container = styled.main`
 `;
 
 const BaseCard= styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -229,4 +229,3 @@ const DetailsCard = styled.div`
     font-size: 1.8em;
   }
 `;
-

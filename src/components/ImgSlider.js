@@ -36,10 +36,11 @@ const ImgSlider = () => {
 
 const Carousel = styled(Slider)`{
   margin-top: 100px;
+  overflow: hidden;
   & > button {
     opacity: 1;
     height: 100%;
-    width: 300px;
+    width: 400px;
     z-index: 1;
     &:hover {
       opacity: 1;
