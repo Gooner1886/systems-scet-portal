@@ -8,21 +8,8 @@ const API_KEY="AIzaSyAhgUECEcnMz7li38-C_nkJcltw536Kcx4";
 
 async function VerifyCaptcha(token){
     let status=false;
-
-    const headers = {
-        "content-type": "application/json",
-        "Authorization": "<token>"
-    };
     
-    await axios.post("http://localhost:3001",
-    {
-        query:`query VerifyCaptcha($token:String!){
-            Verify(token:$token)
-          }`,
-        variables:{
-            token:token
-        }
-    },headers).then(()=>{
+    await axios.post("http://localhost:3001/post",{token}).then(()=>{
         status=true; 
     }).catch(()=>{
         status=false;
@@ -40,7 +27,7 @@ function CheckSignIn(callback)
 
     useEffect(()=>{
     axios.post(url,{idToken:token})                                 //GET USERNAME CORRESPONDING TO TOKEN
-    .then((response)=>{user.setter(true);callback(response.data.users[0].localId)})
+    .then((response)=>{console.log(response.data);user.setter(true);callback(response.data.users[0].localId)})
     .catch((err)=>{
         user.setter(false);
         console.log("Not Logged In")}
