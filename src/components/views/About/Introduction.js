@@ -1,7 +1,11 @@
 import { Avatar, Stack } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import Logged from "../../context";
 
 const Introduction = () => {
+
+  const user = useContext(Logged);
+
   return (
     <>
       <Stack
@@ -16,7 +20,7 @@ const Introduction = () => {
       >
         <Avatar
           alt="Faculty name"
-          src="%PUBLIC_URL%/faculty photos/Kishor Kolhe.JPG"
+          src="/facultyPhotos/KishorKolhe.jpg"
           sx={{
             width: ["64px", "128px", "256px"],
             height: ["64px", "128px", "256px"],
@@ -30,12 +34,9 @@ const Introduction = () => {
           flex={"0.5"}
         >
           <p fontFamily={"Poppins"} style={{ textAlign: "left" }}>
-            Dr. Kishor R. Kolhe has spent more than 24 years in Engineering
-            Academics and Industry. Out of 11 years of Industry Experience he
-            worked as Deputy Manager and HOD, Prepress and Information
-            Technology Division of The Times of India, Pune for 9.5 years.
+            {`${user.value.intro}`}
           </p>
-          <br />
+          {/* <br />
           <p fontFamily={"Poppins"} style={{ textAlign: "left" }}>
             More than 13 years he worked in Engineering Academics in Computer
             Engineering and Information Technology Departments in Savitribai
@@ -47,7 +48,7 @@ const Introduction = () => {
             Currently he is working as an Associate Professor, CSE in School of
             Computer Engineering and Technology, Dr. Vishwanath Karad MIT World
             Peace University, Pune.
-          </p>
+          </p> */}
         </Stack>
       </Stack>
     </>

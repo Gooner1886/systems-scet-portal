@@ -2,38 +2,38 @@ import React, { useState } from "react";
 import Chart from "react-apexcharts";
 
 function BarChart(props) {
-  console.log(props)
+  console.log(props);
 
   let countArray = [];
-  let count2017 = 0;  
-  let count2018 = 0;  
-  let count2019 = 0;  
-  let count2020 = 0;  
-  let count2021 = 0;  
-  props.data.forEach(el=>{
-    if(el.year === 2017) {
+  let count2017 = 0;
+  let count2018 = 0;
+  let count2019 = 0;
+  let count2020 = 0;
+  let count2021 = 0;
+  props.data.forEach((el) => {
+    if (el.year === 2017) {
       count2017 += el.count;
-    } else if(el.year === 2018) {
+    } else if (el.year === 2018) {
       count2018 += el.count;
-    } else if(el.year === 2019) {
+    } else if (el.year === 2019) {
       count2019 += el.count;
-    } else if(el.year === 2020) {
+    } else if (el.year === 2020) {
       count2020 += el.count;
     } else {
       count2021 += el.count;
     }
-  })
+  });
   countArray.push(count2017, count2018, count2019, count2020, count2021);
   console.log(countArray);
   const seriesArray = [
     {
-      name:`${props.bottomHeader}`,
-      data:countArray
-    }
-  ]
-  const [series] = useState(seriesArray)
+      name: `${props.bottomHeader}`,
+      data: countArray,
+    },
+  ];
+  const [series, setSeries] = useState(seriesArray);
 
-  const [option] = useState({
+  const [option, setOption] = useState({
     title: {
       text: `${props.heading}`,
       style: { fontSize: 25, marginBottom: "1rem" },
@@ -49,13 +49,7 @@ function BarChart(props) {
 
     xaxis: {
       tickPlacement: "on",
-      categories: [
-        "2017",
-        "2018",
-        "2019",
-        "2020",
-        "2021"
-      ],
+      categories: ["2017", "2018", "2019", "2020", "2021"],
       title: {
         text: `${props.bottomHeader}`,
         style: { color: "black", fontSize: 30 },
@@ -89,19 +83,17 @@ function BarChart(props) {
         fontSize: 15,
       },
     },
-  })
+  });
 
   return (
-    
     <React.Fragment>
       <div>
-
         <Chart
-         style={{
-          paddingTop: '2rem',
-          width: '80%',
-          height: '20rem',
-        }}
+          style={{
+            paddingTop: "2rem",
+            width: "80%",
+            height: "20rem",
+          }}
           type="bar"
           // width={1100}
           // height={700}

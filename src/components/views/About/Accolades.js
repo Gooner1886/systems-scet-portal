@@ -1,10 +1,12 @@
 import { Icon, Stack } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import { red, yellow } from "@mui/material/colors";
 import { orange } from "@material-ui/core/colors";
+import Logged from "../../context";
 
 const Accolades = () => {
+  const user = useContext(Logged);
   return (
     <>
       <Stack
@@ -29,7 +31,7 @@ const Accolades = () => {
             sx={{ color: red[800] }}
           ></Icon>
           <p style={{ fontSize: "large", fontWeight: "700" }}>
-            24+ years of experience
+            {`${user.value.experience}+ years of experience`}
           </p>
         </Stack>
         <Stack
@@ -44,7 +46,7 @@ const Accolades = () => {
             sx={{ color: red[800] }}
           ></Icon>
           <p style={{ fontSize: "large", fontWeight: "700" }}>
-            60 UG + PG projects
+            {`${user.value.projects} UG + PG projects`}
           </p>
         </Stack>
         <Stack
@@ -59,7 +61,7 @@ const Accolades = () => {
             sx={{ color: red[800] }}
           ></Icon>
           <p style={{ fontSize: "large", fontWeight: "700" }}>
-            15 Seminars conducted
+            {`${user.value.trainings} Seminars conducted`}
           </p>
         </Stack>
         <Stack
@@ -74,7 +76,7 @@ const Accolades = () => {
             sx={{ color: red[800] }}
           ></Icon>
           <p style={{ fontSize: "large", fontWeight: "700" }}>
-            25 papers published
+            {`${user.value.papers} papers published`}
           </p>
         </Stack>
       </Stack>

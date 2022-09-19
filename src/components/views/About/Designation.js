@@ -4,10 +4,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import React from "react";
+import React, { useContext } from "react";
 import { blue, pink } from "@mui/material/colors";
+import Logged from "../../context";
 
 const Designation = () => {
+  const user = useContext(Logged);
   return (
     <>
       <Box
@@ -70,8 +72,8 @@ const Designation = () => {
             alignItems={"center"}
             spacing={"2"}
           >
-            <h2 fontFamily={"Poppins"}>Kishor Kolhe, PHD</h2>
-            <p fontFamily={"Poppins"}>Associate Professor of CSE</p>
+            <h2 fontFamily={"Poppins"}>{`${user.value.name}, ${user.value.title}`}</h2>
+            <p fontFamily={"Poppins"}>{`${user.value.position}`}</p>
             <p fontFamily={"Poppins"}>MITWPU</p>
           </Stack>
         </Stack>
