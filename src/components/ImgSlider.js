@@ -16,19 +16,17 @@ const ImgSlider = () => {
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src='/carousel/banner1.png' alt=""/>
+                <img src='/carousel/scet1.png' alt=""/>
             </Wrap>
             <Wrap>
-                <img src='/carousel/Carousel1.png' alt=""/>
+                <img src='/carousel/scet2.png' alt=""/>
             </Wrap>
             <Wrap>
-                <img src='/carousel/Carousel2.png' alt=""/>
+                <img src='/carousel/carousel2.png' alt=""/>
             </Wrap>
-            {/*<Wrap>*/}
-            {/*    <a href="">*/}
-            {/*        <img src='/carousel/Carousel3.png' alt=""/>*/}
-            {/*    </a>*/}
-            {/*</Wrap>*/}
+            <Wrap>
+                <img src='/carousel/scet4.png' alt=""/>
+            </Wrap>
         </Carousel>
     );
 };
@@ -90,6 +88,7 @@ const Wrap = styled.div`
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   &:hover {
