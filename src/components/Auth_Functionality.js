@@ -2,19 +2,20 @@ import axios from 'axios';
 import { useContext, useEffect} from 'react';
 import Logged from "./context"
 
-const API_KEY="AIzaSyAhgUECEcnMz7li38-C_nkJcltw536Kcx4"; 
+const API_KEY="AIzaSyD_IpvEOmupo-tfIcWtkJ7nQSeLfuqiiwQ"; 
 //HIDE LATER IN ENV
 
 
 async function VerifyCaptcha(token){
     let status=false;
     
-    await axios.post("http://localhost:3001/post",{token}).then(()=>{
+    await axios.post("http://localhost:3001/api/v1/functionality/verifyCaptcha",{token}).then(()=>{
         status=true; 
     }).catch(()=>{
         status=false;
     })
 
+    console.log("verified");
     return status;
 }
 
@@ -27,7 +28,7 @@ function CheckSignIn(callback)
 
     useEffect(()=>{
     axios.post(url,{idToken:token})                                 //GET USERNAME CORRESPONDING TO TOKEN
-    .then((response)=>{console.log(response.data);user.setter(true);callback(response.data.users[0].localId)})
+    .then((response)=>{console.log(response.data.users[0]);user.setter(true);callback(response.data.users[0].localId)})
     .catch((err)=>{
         user.setter(false);
         console.log("Not Logged In")}
