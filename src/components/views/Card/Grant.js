@@ -25,7 +25,7 @@ const Grant = () => {
             marginBottom: "10px",
           }}
         >
-          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="#" style={{ textDecoration: "none", color: "white" }}>
             Add Grant
           </Link>
         </Button>
