@@ -6,16 +6,16 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import logo3 from '../../../Assets/logo3.jpg';
 
-export default function ResearchLanding() {
+export default function ResearchLanding(props) {
   return (
     <>
-         <Card sx={{ maxWidth: 380, border: '0.5 solid black' }}>
+         <Card sx={{ maxWidth: 380, border: '0.5 solid black' }} onClick={()=>{window.location.href=(props.link)}}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="240"
-          width="40"
-          image= {logo3}
+          height="240px"
+          width="40px"
+          image= {props.image}
           alt="green iguana"
         />
         {/* <CardContent>
