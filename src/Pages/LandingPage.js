@@ -14,6 +14,10 @@ import Achieve1 from "../Assets/Achieve1.jpg";
 import Achieve3 from "../Assets/Achieve3.jpg";
 import Achieve4 from "../Assets/Achieve4.jpg";
 import ImgSlider from "../components/ImgSlider";
+import Research1 from "../Assets/Research1.png";
+import Research2 from "../Assets/Research2.png";
+import Research3 from "../Assets/Research3.png";
+import { width } from "@mui/system";
 
 const LandingPage = (props) => {
   // const chartData = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
@@ -41,20 +45,21 @@ const LandingPage = (props) => {
       <Navbar />
       <ImgSlider />
       <Container>
-        <div style={{ paddingLeft: "4%", marginTop: "-3%" }}>
+        <div style={{ paddingLeft: "4%", marginTop: "-3%", width: "100%" }}>
           <div className="content">
             <div>
               <img
                   src={logo2}
                   alt="logo"
-                  style={{ height: "18rem", width: "18rem" }}
+                  style={{ height: "18rem", width: "18rem", marginLeft: '-2rem' }}
                   className="img"
               />
             </div>
-            <div style={{ paddingTop: "2rem" }} >
+            <div style={{ paddingTop: "0.5rem", marginLeft: '3rem'  }} >
               <h1
                   className="head"
                   style={{
+                    marginLeft: "1rem",
                     fontSize: "2.4rem",
                     fontWeight: "800",
                     paddingLeft: "1rem",
@@ -64,7 +69,7 @@ const LandingPage = (props) => {
               </h1>
               <div
                   className="para"
-                  style={{ width: "60rem", fontSize: "1rem" }}
+                  style={{ width: "62rem", fontSize: "1rem" }}
               >
                 <p>
                   The UG Programs offered by School of Computer Engineering and
@@ -138,19 +143,19 @@ const LandingPage = (props) => {
               </div>
             </Content>
           </BaseCard>
-
+ 
           <BaseCard>
             <h1>Research & Publication</h1>
             <Content>
               <div className="lcard">
                 <div style={{ paddingTop: "2rem", paddingRight: '2em' }}>
-                  <ResearchLanding />
+                  <ResearchLanding image={Research1} link="https://research.mitwpu.edu.in/publication/the-new-dataset-mitwpu-1k-for-object-recognition-and-image"/>
                 </div>
                 <div style={{ paddingTop: "2rem", paddingRight: '2em' }}>
-                  <ResearchLanding />
+                  <ResearchLanding image={Research2} link="https://research.mitwpu.edu.in/publication/grid" />
                 </div>
                 <div style={{ paddingTop: "2rem", paddingRight: '2em' }}>
-                  <ResearchLanding />
+                  <ResearchLanding image={Research3} link="https://research.mitwpu.edu.in/publication/design-and-implementation-of-multipurpose-chatbot" />
                 </div>
               </div>
             </Content>

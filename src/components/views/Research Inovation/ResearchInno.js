@@ -98,7 +98,7 @@ export default function ResearchInno() {
           display:'flex',
           flexDirection: 'row',
           justifyContent: 'center',
-          marginTop: '95px'
+          marginTop: '76px'
         }}
       >
         {/* <Link to='/'>

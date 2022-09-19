@@ -94,7 +94,7 @@ export default function StudentSection(props) {
           display:'flex',
           flexDirection: 'row',
           justifyContent: 'center',
-          marginTop: '95px'
+          marginTop: '76px'
         }}
       >
         {/* <Link to='/'>
