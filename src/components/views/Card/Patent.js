@@ -22,7 +22,7 @@ const Patent = () => {
             maerginTop: "20px",
           }}
         >
-          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="#" style={{ textDecoration: "none", color: "white" }}>
             Add Patent
           </Link>
         </Button>
