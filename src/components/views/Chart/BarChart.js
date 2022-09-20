@@ -91,8 +91,9 @@ function BarChart(props) {
         <Chart
           style={{
             paddingTop: "2rem",
-            width: "80%",
+            width: "70rem",
             height: "20rem",
+            marginLeft: "5rem",
           }}
           type="bar"
           // width={1100}
