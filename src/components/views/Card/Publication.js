@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import GroupedBarChart from "../Chart/GroupedBarChart";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import Logged from "../../context";
 
 const Publication = () => {
+  const user = useContext(Logged);
   const chartData1 = [6578, 6787, 3245, 9876, 2324, 5123, 2435];
   const [data1, setData1] = useState(chartData1);
   const chartData2 = [657, 678, 324, 987, 232, 512, 243];
@@ -11,23 +13,25 @@ const Publication = () => {
   return (
     <>
       <div>
-        <Button
-          size="large"
-          style={{
-            backgroundColor: "#931F1D",
-            color: "#fff",
-            padding: "10px",
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: "10px",
-            marginLeft: "45vw",
-            marginBottom: "10px",
-          }}
-        >
-          <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
-            Add Publication
-          </Link>
-        </Button>
+        {user.value && (
+          <Button
+            size="large"
+            style={{
+              backgroundColor: "#931F1D",
+              color: "#fff",
+              padding: "10px",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "10px",
+              marginLeft: "45vw",
+              marginBottom: "10px",
+            }}
+          >
+            <Link to="/form" style={{ textDecoration: "none", color: "white" }}>
+              Add Publication
+            </Link>
+          </Button>
+        )}
         <div
           style={{
             padding: "1vw",

@@ -76,6 +76,21 @@ export default function Navbar() {
               </Link>
             </ListItem>
             <Divider />
+            {loggedin.value && <ListItem className="nav__main-list-item">
+              <Link
+                to="/about"
+                className="nav__main-list-item-link"
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                  fontWeight: "500",
+                  //fontSize: '1.3rem',
+                }}
+              >
+                About
+              </Link>
+            </ListItem>}
+            <Divider />
             <ListItem className="nav__main-list-item" style={{ marginLeft: '275px', width: '70%' }}>
               <Link
                 to="/student-section"

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AppBar,Box } from "@mui/material";
 import { styled } from "@mui/system";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
@@ -15,6 +15,7 @@ import logo from '../../../Assets/logo.png'
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+
 
 const blue = {
   5: "#931F1D",
@@ -89,6 +90,8 @@ const TabsList = styled(TabsListUnstyled)`
 
 
 export default function ResearchInno() {
+
+
   return (
     <>
       <Navbar />
