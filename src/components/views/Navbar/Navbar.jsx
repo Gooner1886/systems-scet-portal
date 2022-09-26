@@ -57,7 +57,7 @@ export default function Navbar() {
       </List>
     </Box>
   );
-  
+
   const links = [
     "These ar links starting from 1",
     "https://drive.google.com/drive/u/1/folders/1-MtLF6RzQXXnDja_vbVmT95iBEUpQgQn",
@@ -72,7 +72,7 @@ export default function Navbar() {
     "https://drive.google.com/drive/u/1/folders/10-1Gkjc-4Rb1QpkSYcww-mLgB8BO3iQ3",
     "https://drive.google.com/drive/u/1/folders/105OVNEub5L0-MlsdJgjSMPwujro7t04i",
     "https://drive.google.com/drive/u/1/folders/1072jID3nWvKDQ5bm48wJ1gBW7bJfxD94",
-  ]
+  ];
   return (
     <>
       <AppBar
@@ -92,8 +92,7 @@ export default function Navbar() {
               </Link>
             </ListItem>
             <Divider />
-            {
-              // loggedin.value &&
+            {loggedin.value && (
               <ListItem className="nav__main-list-item">
                 <Link
                   to="/about"
@@ -108,124 +107,103 @@ export default function Navbar() {
                   About
                 </Link>
               </ListItem>
-            }
-            <ListItem>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value="SCET Groups"
-                label="SCET Groups"
-              >
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[1]
-                    );
-                  }}
+            )}
+            {loggedin.value && (
+              <ListItem>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value="SCET Groups"
+                  label="SCET Groups"
                 >
-                  Group1 - Curriculum Development
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[2]
-                    );
-                  }}
-                >
-                  Group2 - Academic Monitoring
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[3]
-                    );
-                  }}
-                >
-                  Group3 - Teaching Learning Planning
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[4]
-                    );
-                  }}
-                >
-                  Group4 - Quality Improvement
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[5]
-                    );
-                  }}
-                >
-                  Group5 - Projects, Seminars & Internships
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[6]
-                    );
-                  }}
-                >
-                  Group6 - FDP Addon Courses
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[7]
-                    );
-                  }}
-                >
-                  Group7 - Infrastructure and Labs
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[8]
-                    );
-                  }}
-                >
-                  Group8 - Students Events and Chapters
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[9]
-                    );
-                  }}
-                >
-                  Group9 - Website and Social Media
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[10]
-                    );
-                  }}
-                >
-                  Group10 - Industry Collaboration
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[11]
-                    );
-                  }}
-                >
-                  Group11 - Research and Innovation
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    window.open(
-                      links[12]
-                    );
-                  }}
-                >
-                  Group12 - Systems
-                </MenuItem>
-              </Select>
-            </ListItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[1]);
+                    }}
+                  >
+                    Group1 - Curriculum Development
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[2]);
+                    }}
+                  >
+                    Group2 - Academic Monitoring
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[3]);
+                    }}
+                  >
+                    Group3 - Teaching Learning Planning
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[4]);
+                    }}
+                  >
+                    Group4 - Quality Improvement
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[5]);
+                    }}
+                  >
+                    Group5 - Projects, Seminars & Internships
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[6]);
+                    }}
+                  >
+                    Group6 - FDP Addon Courses
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[7]);
+                    }}
+                  >
+                    Group7 - Infrastructure and Labs
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[8]);
+                    }}
+                  >
+                    Group8 - Students Events and Chapters
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[9]);
+                    }}
+                  >
+                    Group9 - Website and Social Media
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[10]);
+                    }}
+                  >
+                    Group10 - Industry Collaboration
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[11]);
+                    }}
+                  >
+                    Group11 - Research and Innovation
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      window.open(links[12]);
+                    }}
+                  >
+                    Group12 - Systems
+                  </MenuItem>
+                </Select>
+              </ListItem>
+            )}
+
             <Divider />
             <ListItem
               className="nav__main-list-item"
